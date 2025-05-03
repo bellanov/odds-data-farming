@@ -1,0 +1,19 @@
+{
+  "name": "odds-data-scraping",
+  "version": "0.1.0",
+  "description": "Scripts responsible for farming odds data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellanov/odds-data-scraping.git"
+  },
+  "author": "Bellanov Apilli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bellanov/odds-data-scraping/issues"
+  },
+  "homepage": "https://github.com/bellanov/odds-data-scraping#readme"
+}
