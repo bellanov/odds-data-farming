@@ -1,6 +1,8 @@
 # Odds Data Scraping
 
-Scripts responsible for scraping data from *The Odds API*.
+This project is responsible for scraping data from *The Odds API*.
+
+![Odds Data Scraping Diagram](./diagrams/odds.png "Odds Data Scraping Diagram")
 
 ## Scripts
 
