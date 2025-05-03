@@ -1,6 +1,6 @@
-# Odds Data Scraping
+# Odds Data Farming
 
-This project is responsible for scraping data from *The Odds API*.
+This project is responsible for farming data from *The Odds API* and *Sports Game Odds*.
 
 ![Odds Data Scraping Diagram](./diagrams/odds.png "Odds Data Scraping Diagram")
 
