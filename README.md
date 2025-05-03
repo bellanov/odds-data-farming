@@ -1,8 +1,6 @@
 # Odds Data Scraping
 
-Scripts responsible for scraping data from *ESPN*.
-
-The template contains examples of best practices and standards derived from the [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
+Scripts responsible for scraping data from *The Odds API*.
 
 ## Scripts
 
