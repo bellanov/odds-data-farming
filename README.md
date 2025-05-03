@@ -1,21 +1,21 @@
-# typescript-template
+# Odds Data Scraping
 
-Template for general TypeScript development.
+Scripts responsible for scraping data from *ESPN*.
 
 The template contains examples of best practices and standards derived from the [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
 
 ## Scripts
 
-Summary of the available scripts and their usage. Details available within each script.
+The scripts are organized across a series of directories.
 
 | Script      | Description |
 | ----------- | ----------- |
-| **lint.sh** | Lint the codebase. |
+| **build** | Scripts responsible for aspects of the CICD process. |
+| **sports-game-odds** | Scripts scraping data from *Sports Game Odds*. |
+| **the-odds-api** | Scripts scraping data from *The Odds API*. |
 
-## Examples
+Summary of the available scripts and their usage. Details available within each script.
 
-Summary of each example.
-
-| Example      | Description |
+| Script      | Description |
 | ----------- | ----------- |
 | **lint.sh** | Lint the codebase. |
