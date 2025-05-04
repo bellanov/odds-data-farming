@@ -1,6 +1,6 @@
-# Odds Data Scraping
+# Odds Data Farming
 
-This project is responsible for scraping data from *The Odds API*.
+This project is responsible for **farming** data from *The Odds API* and *Sports Game Odds*.
 
 ![Odds Data Scraping Diagram](./diagrams/odds.png "Odds Data Scraping Diagram")
 
@@ -11,11 +11,4 @@ The scripts are organized across a series of directories.
 | Script      | Description |
 | ----------- | ----------- |
 | **build** | Scripts responsible for aspects of the CICD process. |
-| **sports-game-odds** | Scripts scraping data from *Sports Game Odds*. |
-| **the-odds-api** | Scripts scraping data from *The Odds API*. |
-
-Summary of the available scripts and their usage. Details available within each script.
-
-| Script      | Description |
-| ----------- | ----------- |
-| **lint.sh** | Lint the codebase. |
+| **extract** | Scripts responsible for **extracting** data from *Sports Game Odds* and *The Odds API*. |
