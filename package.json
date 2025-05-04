@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/bellanov/odds-data-scraping/issues"
   },
-  "homepage": "https://github.com/bellanov/odds-data-scraping#readme"
+  "homepage": "https://github.com/bellanov/odds-data-scraping#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0"
+  }
 }

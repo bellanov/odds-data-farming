@@ -179,3 +179,6 @@ dist
 # Diagrams
 /diagrams/*.png.bkp
 /diagrams/*.png.dtmp
+
+# dotenv
+.env
