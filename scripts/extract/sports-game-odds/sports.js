@@ -1,15 +1,13 @@
-
-const axios = require('axios').default;
-require('dotenv').config()
+const axios = require("axios").default;
+require("dotenv").config();
 
 async function getSports() {
-
-  const axios = require('axios').default;
+  const axios = require("axios").default;
 
   const options = {
-    method: 'GET',
-    url: 'https://api.sportsgameodds.com/v2/leagues/',
-    params: { apiKey: process.env.SPORTS_GAME_ODDS }
+    method: "GET",
+    url: "https://api.sportsgameodds.com/v2/leagues/",
+    params: { apiKey: process.env.SPORTS_GAME_ODDS },
   };
 
   try {
