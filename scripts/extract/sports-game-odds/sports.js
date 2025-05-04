@@ -1,8 +1,12 @@
-const axios = require("axios").default;
+/**
+ * @fileoverview Query sports data from Sports Game Odds.
+ */
 require("dotenv").config();
 
+const axios = require("axios").default;
+
+// Query sports data
 async function getSports() {
-  const axios = require("axios").default;
 
   const options = {
     method: "GET",
