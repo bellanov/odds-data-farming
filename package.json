@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@eslint/js": "^9.26.0",
     "dotenv": "^16.5.0",
     "eslint": "^9.26.0",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "jasmine": "^5.7.1"
   }
 }
