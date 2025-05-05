@@ -1,10 +1,13 @@
 /**
- * @fileoverview Query sports data from The Odds API.
+ * @fileoverview Query odds data from The Odds API.
  */
 import 'dotenv/config';
 import axios from "axios";
 
-// Query odds data
+/**
+ * Query odds data.
+ * @param arg A number to do something to.
+ */
 function getOdds() {
   // Retrieve API Key for authentication
   const apiKey = process.env.THE_ODDS_API;
@@ -53,4 +56,5 @@ function getOdds() {
     });
 }
 
+// TODO: Remove after modularizing the project
 getOdds();

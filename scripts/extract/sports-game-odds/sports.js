@@ -4,7 +4,9 @@
 import 'dotenv/config';
 import axios from "axios";
 
-// Query sports data
+/**
+ * Query sports data.
+ */
 async function getSports() {
 
   const options = {
@@ -21,4 +23,5 @@ async function getSports() {
   }
 }
 
+// TODO: Remove after modularizing the project
 getSports();

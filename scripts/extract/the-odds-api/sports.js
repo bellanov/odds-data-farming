@@ -4,7 +4,9 @@
 import 'dotenv/config';
 import axios from "axios";
 
-// Query sports data
+/**
+ * Query sports data.
+ */
 function getSports() {
   // Retrieve API Key for authentication
   const apiKey = process.env.THE_ODDS_API;
@@ -24,4 +26,5 @@ function getSports() {
     });
 }
 
+// TODO: Remove after modularizing the project
 getSports();
