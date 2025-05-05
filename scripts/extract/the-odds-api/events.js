@@ -20,7 +20,7 @@ export function getEvents(sportKey) {
       },
     })
     .then((response) => {
-      // response.data.data contains a list of live and
+      // The response.data.data object contains a list of live and
       // upcoming events and odds for different bookmakers.
       // Events are ordered by start time (live events are first)
       console.log(JSON.stringify(response.data));
@@ -37,10 +37,3 @@ export function getEvents(sportKey) {
       console.log(error.response.data);
     });
 }
-
-// TODO: Remove after modularizing the project
-
-// use the sport_key from the /sports endpoint below, or use 'upcoming' to see the next 8 games across all sports
-const sportKey = "mma_mixed_martial_arts";
-
-getEvents(sportKey);

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Query sports data from Sports Game Odds.
+ * @fileoverview Query sports data from The Odds API.
  */
 import 'dotenv/config';
 import axios from "axios";
@@ -26,6 +26,3 @@ export function getSports() {
       console.log(error.response.data);
     });
 }
-
-// TODO: Remove after modularizing the project
-getSports();

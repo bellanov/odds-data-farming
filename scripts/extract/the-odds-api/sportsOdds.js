@@ -8,7 +8,7 @@ import axios from "axios";
  * Query odds data.
  * @param sportKey Identifier of sport to query.
  */
-function getSportsOdds(sportKey) {
+export function getSportsOdds(sportKey) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
@@ -50,10 +50,3 @@ function getSportsOdds(sportKey) {
       console.log(error.response.data);
     });
 }
-
-// TODO: Remove after modularizing the project
-
-// use the sport_key from the /sports endpoint below, or use 'upcoming' to see the next 8 games across all sports
-const sportKey = "mma_mixed_martial_arts";
-
-getSportsOdds(sportKey);
