@@ -1,9 +1,8 @@
 /**
  * @fileoverview Query sports data from The Odds API.
  */
-require("dotenv").config();
-
-const axios = require("axios");
+import 'dotenv/config';
+import axios from "axios";
 
 // Query odds data
 function getOdds() {
