@@ -1,12 +1,15 @@
 /**
- * @fileoverview Query sports data from Sports Game Odds.
+ * @fileoverview Query sports data from The Odds API.
  */
 import 'dotenv/config';
 import axios from "axios";
 
-// Query sports data
-function getSports() {
+/**
+ * Query sports data.
+ */
+export function getSports() {
   // Retrieve API Key for authentication
+  // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
 
   axios
@@ -23,5 +26,3 @@ function getSports() {
       console.log(error.response.data);
     });
 }
-
-getSports();

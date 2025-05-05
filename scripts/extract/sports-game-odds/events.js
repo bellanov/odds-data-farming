@@ -5,15 +5,18 @@ import 'dotenv/config';
 import axios from "axios";
 
 /**
- * Query sports data.
+ * Query events data.
  */
-export async function getSports() {
+export async function getEvents(leagueID) {
 
   const options = {
     method: "GET",
-    url: "https://api.sportsgameodds.com/v2/leagues/",
-    // eslint-disable-next-line no-undef
-    params: { apiKey: process.env.SPORTS_GAME_ODDS },
+    url: "https://api.sportsgameodds.com/v2/events/",
+    params: { 
+      // eslint-disable-next-line no-undef
+      apiKey: process.env.SPORTS_GAME_ODDS,
+      leagueID: leagueID
+    },
   };
 
   try {
