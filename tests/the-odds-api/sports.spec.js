@@ -6,5 +6,10 @@ import 'dotenv/config';
 
 import * as Sports from "../../scripts/extract/the-odds-api/sports.js" ; 
 
-// Query Sports
-Sports.getSports();
+
+describe("The Odds API - Retrieve sports data", function () {
+  it("Retrieve sport data", function () {
+    // Query Sports
+    Sports.getSports();
+  });
+});
