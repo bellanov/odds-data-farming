@@ -7,8 +7,9 @@ import axios from "axios";
 /**
  * Query sports data.
  */
-function getSports() {
+export function getSports() {
   // Retrieve API Key for authentication
+  // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
 
   axios

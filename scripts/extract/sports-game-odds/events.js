@@ -7,7 +7,7 @@ import axios from "axios";
 /**
  * Query events data.
  */
-async function getEvents(leagueID) {
+export async function getEvents(leagueID) {
 
   const options = {
     method: "GET",
@@ -26,8 +26,3 @@ async function getEvents(leagueID) {
     console.error(error);
   }
 }
-
-// TODO: Remove after modularizing the project
-const leagueID = "UFC"
-
-getEvents(leagueID);

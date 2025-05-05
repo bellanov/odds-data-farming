@@ -7,7 +7,7 @@ import axios from "axios";
 /**
  * Query sports data.
  */
-async function getSports() {
+export async function getSports() {
 
   const options = {
     method: "GET",
@@ -23,6 +23,3 @@ async function getSports() {
     console.error(error);
   }
 }
-
-// TODO: Remove after modularizing the project
-getSports();

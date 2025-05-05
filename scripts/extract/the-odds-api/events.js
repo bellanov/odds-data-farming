@@ -8,7 +8,7 @@ import axios from "axios";
  * Query events data.
  * @param sportKey Identifier of sport to query.
  */
-function getEvents(sportKey) {
+export function getEvents(sportKey) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
