@@ -1,45 +1,27 @@
 /**
- * @fileoverview Query odds data from The Odds API.
+ * @fileoverview Query events data from The Odds API.
  */
 import 'dotenv/config';
 import axios from "axios";
 
 /**
- * Query odds data.
- * @param arg A number to do something to.
+ * Query events data.
+ * @param sportKey Identifier of sport to query.
  */
-function getOdds() {
+function getEvents(sportKey) {
   // Retrieve API Key for authentication
+  // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
-
-  // use the sport_key from the /sports endpoint below, or use 'upcoming' to see the next 8 games across all sports
-  const sportKey = "upcoming";
   
-  // uk | us | eu | au. Multiple can be specified if comma delimited
-  const regions = "us"; 
-
-  // h2h | spreads | totals. Multiple can be specified if comma delimited
-  const markets = "h2h"; 
-
-  // decimal | american
-  const oddsFormat = "decimal"; 
-
-  // iso | unix
-  const dateFormat = "iso"; 
-
   axios
-    .get(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`, {
+    .get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events`, {
       params: {
         apiKey,
-        regions,
-        markets,
-        oddsFormat,
-        dateFormat,
       },
     })
     .then((response) => {
       // response.data.data contains a list of live and
-      //   upcoming events and odds for different bookmakers.
+      // upcoming events and odds for different bookmakers.
       // Events are ordered by start time (live events are first)
       console.log(JSON.stringify(response.data));
 
@@ -57,4 +39,8 @@ function getOdds() {
 }
 
 // TODO: Remove after modularizing the project
-getOdds();
+
+// use the sport_key from the /sports endpoint below, or use 'upcoming' to see the next 8 games across all sports
+const sportKey = "mma_mixed_martial_arts";
+
+getEvents(sportKey);
