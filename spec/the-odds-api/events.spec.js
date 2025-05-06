@@ -8,11 +8,16 @@ import * as SportsEvents from "../../scripts/extract/the-odds-api/events.js" ;
 
 
 describe("The Odds API - Query sport events", function () {
-  it("Retrieve sport data", function () {
+
+  it("getEvents", function () {
     // Identify sport to query
     const sportKey = "mma_mixed_martial_arts";
 
     // Query sport events
-    SportsEvents.getEvents(sportKey);
+    const events = SportsEvents.getEvents(sportKey);
+
+    // Check if the events are not undefined
+    expect(events).not.toBeUndefined();
   });
+  
 });

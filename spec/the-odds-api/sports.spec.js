@@ -8,8 +8,12 @@ import * as Sports from "../../scripts/extract/the-odds-api/sports.js" ;
 
 
 describe("The Odds API - Retrieve sports data", function () {
-  it("Retrieve sport data", function () {
+
+  it("getSports", async function () {
+
     // Query Sports
-    Sports.getSports();
-  });
+    await Sports.getSports().then((response) => {
+      expect(response.data).not.toBeUndefined()});
+    })
+
 });

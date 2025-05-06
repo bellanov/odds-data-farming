@@ -13,6 +13,9 @@ describe("Sports Game Odds - Query sport events", function () {
     const leagueID = "UFC"
 
     // Query sports events
-    SportsEvents.getEvents(leagueID);
+    const sports = SportsEvents.getEvents(leagueID);
+    
+    // Check if the events are not undefined
+    expect(sports).not.toBeUndefined();
   });
 });
