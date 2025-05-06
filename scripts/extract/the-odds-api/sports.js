@@ -22,5 +22,5 @@ export function getSports() {
       console.log(error.response.data);
     });
 
-    return sports;
+  return sports;
 }

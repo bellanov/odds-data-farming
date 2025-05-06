@@ -22,6 +22,7 @@ export function getEvents(sportKey) {
       // Check your usage
       console.log("Remaining requests", response.headers["x-requests-remaining"]);
       console.log("Used requests", response.headers["x-requests-used"]);
+      return response;
     })
     .catch((error) => {
       console.log("Error status", error.response.status);

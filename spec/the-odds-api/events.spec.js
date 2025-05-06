@@ -10,13 +10,13 @@ describe("The Odds API - Query sport events", function () {
 
   it("getEvents", async function () {
     // Identify sport to query
-    const sportKey = "mma_mixed_martial_arts";
+    const sportKey = "icehockey_nhl";
 
-    await SportsEvents.getEvents(sportKey).then((events) => { 
-      // console.log("Events:", events.data);
+    await SportsEvents.getEvents(sportKey).then((response) => { 
       // Check if the events are not undefined
-      expect(events).not.toBeUndefined();
+      expect(response.data).not.toBeUndefined();
     });
+
   });
 
 });

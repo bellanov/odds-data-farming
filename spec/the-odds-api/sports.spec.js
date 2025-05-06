@@ -12,7 +12,6 @@ describe("The Odds API - Retrieve sports data", function () {
 
     // Query Sports
     await Sports.getSports().then((response) => {
-      console.log(response);
       expect(response).not.toBeUndefined()});
     });
 
