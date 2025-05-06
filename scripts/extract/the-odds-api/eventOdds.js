@@ -40,16 +40,9 @@ export function getEventOdds(sportKey, eventId) {
       }
     })
     .then((response) => {
-
-      // The response.data.data object contains a list of live and
-      // upcoming events and odds for different bookmakers.
-      // Events are ordered by start time (live events are first)
-      console.log("Event:", response.data);
-
       // Check your usage
       console.log("Remaining requests",response.headers["x-requests-remaining"]);
       console.log("Used requests", response.headers["x-requests-used"]);
-
     })
     .catch((error) => {
       console.log("Error status", error.response.status);

@@ -13,27 +13,20 @@ export function getEvents(sportKey) {
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
   
-  axios
-    .get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events`, {
+  const events = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events`, {
       params: {
         apiKey,
       },
     })
     .then((response) => {
-      // The response.data.data object contains a list of live and
-      // upcoming events and odds for different bookmakers.
-      // Events are ordered by start time (live events are first)
-      console.log(JSON.stringify(response.data));
-
       // Check your usage
-      console.log(
-        "Remaining requests",
-        response.headers["x-requests-remaining"],
-      );
+      console.log("Remaining requests", response.headers["x-requests-remaining"]);
       console.log("Used requests", response.headers["x-requests-used"]);
     })
     .catch((error) => {
       console.log("Error status", error.response.status);
       console.log(error.response.data);
     });
+
+    return events;
 }

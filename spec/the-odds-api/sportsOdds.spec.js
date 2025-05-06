@@ -4,11 +4,11 @@
  * perspective of a sport.
  */
 import 'dotenv/config';
-
 import * as SportsOdds from "../../scripts/extract/the-odds-api/sportsOdds.js" ; 
 
 
 describe("The Odds API - Query sports odds", function () {
+
   it("getSportsOdds", function () {
     // Identify sport to query
     const sportKey = "mma_mixed_martial_arts";
@@ -19,4 +19,5 @@ describe("The Odds API - Query sports odds", function () {
     // Check if the sports odds are not undefined
     expect(sportsOdds).not.toBeUndefined();
   });
+
 });

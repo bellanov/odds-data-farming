@@ -4,7 +4,6 @@
  * perspective of a sport.
  */
 import 'dotenv/config';
-
 import * as EventOdds from "../../scripts/extract/the-odds-api/eventOdds.js" ; 
 
 
