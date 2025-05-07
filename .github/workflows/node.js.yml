@@ -26,6 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: 'Create env file'
+      run: |
+        touch .env
+        echo API_ENDPOINT="https://xxx.execute-api.us-west-2.amazonaws.com" >> .env
+        echo API_KEY=${{ secrets.THE_ODDS_API }} >> .env
+        cat .env
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
