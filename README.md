@@ -13,6 +13,11 @@ The scripts are organized across a series of directories.
 | **build**   | Scripts responsible for aspects of the CICD process.                                    |
 | **extract** | Scripts responsible for **extracting** data from _Sports Game Odds_ and _The Odds API_. |
 
-## Development Workflow
+## Testing
 
 Information about **Jasmine** integration due to support for *ECMAScript (ES Modules)* modules out of the box.
+
+```sh
+# Execute Unit Tests
+npm test
+```
