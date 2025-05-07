@@ -13,8 +13,10 @@ describe("Sports Game Odds - Query sport events", function () {
 
     // Query sports events
     await SportsEvents.getEvents(leagueID).then((response) => {
+
       // Check if the events are not undefined
       expect(response.data).not.toBeUndefined();
+      
     });
 
   });

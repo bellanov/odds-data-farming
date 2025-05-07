@@ -11,8 +11,10 @@ describe("Sports Game Odds - Retrieve sport data", function () {
 
     // Query Sports
     await Sports.getSports().then((response) => {
+
       // Check if the sports are not undefined
       expect(response.data).not.toBeUndefined();
+      
     });
 
   });
