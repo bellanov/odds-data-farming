@@ -8,8 +8,13 @@ import * as Sports from "../../scripts/extract/sports-game-odds/sports.js" ;
 
 
 describe("Sports Game Odds - Retrieve sport data", function () {
-  it("Retrieve sport data", function () {
+  it("Retrieve sport data", async function () {
+
     // Query Sports
-    Sports.getSports();
+    await Sports.getSports().then((response) => {
+      // Check if the sports are not undefined
+      expect(response.data).not.toBeUndefined();
+    });
+
   });
 });

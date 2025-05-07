@@ -18,6 +18,7 @@ export async function getSports() {
 
   try {
     const { data } = await axios.request(options);
+    return data;
   } catch (error) {
     console.error(error);
   }

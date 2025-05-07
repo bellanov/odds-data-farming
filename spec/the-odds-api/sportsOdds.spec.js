@@ -15,7 +15,7 @@ describe("The Odds API - Query sports odds", function () {
 
     // Query sport odds
     await SportsOdds.getSportsOdds(sportKey).then((response) => {
-      console.log(response.data);
+
       // Check if the sports odds are not undefined
       expect(response.data).not.toBeUndefined();
 
