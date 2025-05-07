@@ -32,3 +32,8 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: env
+    - shell: bash
+      env:
+        THE_ODDS_API: ${{ secrets.THE_ODDS_API }}
+      run: |
+        echo test "$SUPER_SECRET"
