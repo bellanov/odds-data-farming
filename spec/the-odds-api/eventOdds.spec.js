@@ -18,11 +18,10 @@ describe("The Odds API - Query event odds", function () {
 
     // Query sport odds
     await EventOdds.getEventOdds(sportKey, eventId).then((response) => {
-
       // Check if the sports odds are not undefined
       expect(response.data).not.toBeUndefined();
-
     });
+
   });
 
 });
