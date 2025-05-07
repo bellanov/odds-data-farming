@@ -12,7 +12,7 @@ describe("The Odds API - Retrieve sports data", function () {
 
     // Query sports
     await Sports.getSports().then((response) => {
-      expect(response).not.toBeUndefined()});
+      expect(response.data).not.toBeUndefined()});
     });
 
 });
