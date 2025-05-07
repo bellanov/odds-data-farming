@@ -1,26 +1,21 @@
+
 /**
- * @fileoverview Query sports data from The Odds API.
+ * @fileoverview Test the query to retrieve sports data.
  */
 import 'dotenv/config';
-import axios from "axios";
+import * as Sports from "../../scripts/api/the-odds-api/sports.js" ; 
 
-/**
- * Query sports data.
- */
-export function getSports() {
-  // Retrieve API Key for authentication
-  // eslint-disable-next-line no-undef
-  const apiKey = process.env.THE_ODDS_API;
 
-  const sports = axios.get("https://api.the-odds-api.com/v4/sports", {
-    params: {
-      apiKey,
-    },
-  })
-    .catch((error) => {
-      console.log("Error status", error.response.status);
-      console.log(error.response.data);
+describe("The Odds API - Retrieve sports data", function () {
+
+  it("getSports", async function () {
+
+    // Query sports
+    await Sports.getSports().then((response) => {
+
+      // Check if the sports are not undefined
+      expect(response.data).not.toBeUndefined()});
+
     });
 
-  return sports;
-}
+});

@@ -4,7 +4,7 @@
  * perspective of a sport.
  */
 import 'dotenv/config';
-import * as SportsOdds from "../../scripts/extract/the-odds-api/sportsOdds.js" ; 
+import * as SportsOdds from "../../scripts/api/the-odds-api/sportsOdds.js" ; 
 
 
 describe("The Odds API - Query sports odds", function () {
@@ -18,7 +18,7 @@ describe("The Odds API - Query sports odds", function () {
 
       // Check if the sports odds are not undefined
       expect(response.data).not.toBeUndefined();
-      
+
     });
 
   });

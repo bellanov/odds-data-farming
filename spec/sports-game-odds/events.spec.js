@@ -3,7 +3,7 @@
  * @fileoverview Test the query to retrieve events data.
  */
 import 'dotenv/config';
-import * as SportsEvents from "../../scripts/extract/sports-game-odds/events.js";
+import * as SportsEvents from "../../scripts/api/sports-game-odds/events.js";
 
 
 describe("Sports Game Odds - Query sport events", function () {
@@ -16,8 +16,9 @@ describe("Sports Game Odds - Query sport events", function () {
 
       // Check if the events are not undefined
       expect(response.data).not.toBeUndefined();
-      
+
     });
 
   });
+
 });

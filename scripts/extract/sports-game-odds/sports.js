@@ -1,25 +1,23 @@
+
 /**
- * @fileoverview Query sports data from Sports Game Odds.
+ * @fileoverview Test the query to retrieve sports data.
  */
 import 'dotenv/config';
-import axios from "axios";
+import * as Sports from "../../scripts/api/sports-game-odds/sports.js" ; 
 
-/**
- * Query sports data.
- */
-export async function getSports() {
 
-  const options = {
-    method: "GET",
-    url: "https://api.sportsgameodds.com/v2/leagues/",
-    // eslint-disable-next-line no-undef
-    params: { apiKey: process.env.SPORTS_GAME_ODDS },
-  };
+describe("Sports Game Odds - Retrieve sport data", function () {
 
-  try {
-    const { data } = await axios.request(options);
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
-}
+  it("Retrieve sport data", async function () {
+
+    // Query Sports
+    await Sports.getSports().then((response) => {
+
+      // Check if the sports are not undefined
+      expect(response.data).not.toBeUndefined();
+
+    });
+
+  });
+
+});

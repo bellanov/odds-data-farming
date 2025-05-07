@@ -3,7 +3,7 @@
  * @fileoverview Test the query to retrieve events data.
  */
 import 'dotenv/config';
-import * as SportsEvents from "../../scripts/extract/the-odds-api/events.js" ; 
+import * as SportsEvents from "../../scripts/api/the-odds-api/events.js" ; 
 
 
 describe("The Odds API - Query sport events", function () {
@@ -17,7 +17,7 @@ describe("The Odds API - Query sport events", function () {
 
       // Check if the events are not undefined
       expect(response.data).not.toBeUndefined();
-      
+
     });
 
   });
