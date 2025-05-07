@@ -26,8 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      env: # Or as an environment variable
-        super_secret: ${{ secrets.THE_ODDS_API }}
+      env:
+        THE_ODDS_API: ${{ secrets.THE_ODDS_API }}
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
