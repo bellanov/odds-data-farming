@@ -9,15 +9,17 @@ import * as SportsOdds from "../../scripts/extract/the-odds-api/sportsOdds.js" ;
 
 describe("The Odds API - Query sports odds", function () {
 
-  it("getSportsOdds", function () {
+  it("getSportsOdds", async function () {
     // Identify sport to query
     const sportKey = "mma_mixed_martial_arts";
 
     // Query sport odds
-    const sportsOdds = SportsOdds.getSportsOdds(sportKey);
+    await SportsOdds.getSportsOdds(sportKey).then((response) => {
 
-    // Check if the sports odds are not undefined
-    expect(sportsOdds).not.toBeUndefined();
+      // Check if the sports odds are not undefined
+      expect(response.data).not.toBeUndefined();
+
+    });
   });
-
+  
 });

@@ -12,6 +12,7 @@ describe("The Odds API - Query sport events", function () {
     // Identify sport to query
     const sportKey = "icehockey_nhl";
 
+    // Query events
     await SportsEvents.getEvents(sportKey).then((response) => { 
       // Check if the events are not undefined
       expect(response.data).not.toBeUndefined();

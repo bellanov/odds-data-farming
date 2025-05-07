@@ -29,8 +29,7 @@ export function getSportsOdds(sportKey) {
   // iso | unix
   const dateFormat = "iso";
 
-  axios
-    .get(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`, {
+  const sportsOdds = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`, {
       params: {
         apiKey,
         dateFormat,
@@ -43,9 +42,12 @@ export function getSportsOdds(sportKey) {
       // Check your usage
       console.log("Remaining requests",response.headers["x-requests-remaining"]);
       console.log("Used requests", response.headers["x-requests-used"]);
+      return response
     })
     .catch((error) => {
       console.log("Error status", error.response.status);
       console.log(error.response.data);
     });
+  
+  return sportsOdds;
 }
