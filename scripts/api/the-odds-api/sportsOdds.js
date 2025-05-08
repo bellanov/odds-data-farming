@@ -39,7 +39,7 @@ export function getSportsOdds(sportKey) {
       }
     })
     .then((response) => {
-      return response
+      return response;
     })
     .catch((error) => {
       console.log("Error status", error.response.status);
