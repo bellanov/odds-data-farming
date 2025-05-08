@@ -1,6 +1,6 @@
 
 /**
- * @fileoverview Test the query to retrieve sports data.
+ * @fileoverview Extract sports events data.
  */
 import 'dotenv/config';
 import * as SportsEvents from "../../api/sports-game-odds/events.js";
