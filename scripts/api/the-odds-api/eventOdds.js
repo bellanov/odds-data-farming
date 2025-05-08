@@ -39,9 +39,6 @@ export function getEventOdds(sportKey, eventId) {
       }
     })
     .then((response) => {
-      // Check your usage
-      console.log("Remaining Requests => ",response.headers["x-requests-remaining"]);
-      console.log("Used Requests =>", response.headers["x-requests-used"]);
       return response;
     })
     .catch((error) => {
