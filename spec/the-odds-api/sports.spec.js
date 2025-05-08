@@ -11,10 +11,10 @@ describe("The Odds API - Retrieve sports data", function () {
   it("getSports", async function () {
 
     // Query sports
-    await Sports.getSports().then((response) => {
+    await Sports.getSports().then((sports) => {
 
       // Check if the sports are not undefined
-      expect(response.data).not.toBeUndefined()});
+      expect(sports.data).not.toBeUndefined()});
 
     });
 

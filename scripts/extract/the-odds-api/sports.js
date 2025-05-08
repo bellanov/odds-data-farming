@@ -3,19 +3,17 @@
  * @fileoverview Test the query to retrieve sports data.
  */
 import 'dotenv/config';
-import * as Sports from "../../scripts/api/the-odds-api/sports.js" ; 
+import * as Sports from "../../api/the-odds-api/sports.js" ; 
 
 
-describe("The Odds API - Retrieve sports data", function () {
+// Query Sports
+await Sports.getSports().then((sports) => {
 
-  it("getSports", async function () {
+  sports.data.forEach((sport) => {
 
-    // Query sports
-    await Sports.getSports().then((response) => {
+    // Check if the sports are not undefined
+    console.log(sport);
 
-      // Check if the sports are not undefined
-      expect(response.data).not.toBeUndefined()});
-
-    });
+  });
 
 });

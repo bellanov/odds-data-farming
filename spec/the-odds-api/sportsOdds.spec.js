@@ -14,10 +14,10 @@ describe("The Odds API - Query sports odds", function () {
     const sportKey = "icehockey_nhl";
 
     // Query sport odds
-    await SportsOdds.getSportsOdds(sportKey).then((response) => {
+    await SportsOdds.getSportsOdds(sportKey).then((odds) => {
 
       // Check if the sports odds are not undefined
-      expect(response.data).not.toBeUndefined();
+      expect(odds.data).not.toBeUndefined();
 
     });
 

@@ -12,10 +12,10 @@ describe("Sports Game Odds - Query sport events", function () {
     const leagueID = "NHL"
 
     // Query sports events
-    await SportsEvents.getEvents(leagueID).then((response) => {
+    await SportsEvents.getEvents(leagueID).then((events) => {
 
       // Check if the events are not undefined
-      expect(response.data).not.toBeUndefined();
+      expect(events.data).not.toBeUndefined();
 
     });
 
