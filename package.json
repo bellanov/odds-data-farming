@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "lint": "npx eslint",
     "test": "jasmine"
   },
   "repository": {

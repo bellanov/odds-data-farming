@@ -8,7 +8,7 @@ import axios from "axios";
  * Query odds data.
  * @param sportKey Identifier of sport to query.
  */
-export function getEventOdds(sportKey, eventId) {
+export function getSportsOdds(sportKey) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
@@ -29,7 +29,7 @@ export function getEventOdds(sportKey, eventId) {
   // iso | unix
   const dateFormat = "iso";
 
-  const eventOdds = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events/${eventId}/odds`, {
+  const sportsOdds = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`, {
       params: {
         apiKey,
         dateFormat,
@@ -39,15 +39,12 @@ export function getEventOdds(sportKey, eventId) {
       }
     })
     .then((response) => {
-      // Check your usage
-      console.log("Remaining Requests => ",response.headers["x-requests-remaining"]);
-      console.log("Used Requests =>", response.headers["x-requests-used"]);
       return response;
     })
     .catch((error) => {
       console.log("Error status", error.response.status);
       console.log(error.response.data);
     });
-
-    return eventOdds;
+  
+  return sportsOdds;
 }

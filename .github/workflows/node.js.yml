@@ -33,5 +33,6 @@ jobs:
         echo THE_ODDS_API=${{ secrets.THE_ODDS_API }} >> .env
         echo SPORTS_GAME_ODDS=${{ secrets.SPORTS_GAME_ODDS }} >> .env
     - run: npm ci
+    - run: npm run lint
     - run: npm run build --if-present
     - run: npm test

@@ -1,28 +1,31 @@
+
 /**
- * @fileoverview Query sports data from Sports Game Odds.
+ * @fileoverview Extract sports events data.
  */
 import 'dotenv/config';
-import axios from "axios";
+import * as SportsEvents from "../../api/sports-game-odds/events.js";
 
-/**
- * Query events data.
- */
-export async function getEvents(leagueID) {
 
-  const options = {
-    method: "GET",
-    url: "https://api.sportsgameodds.com/v2/events/",
-    params: { 
-      // eslint-disable-next-line no-undef
-      apiKey: process.env.SPORTS_GAME_ODDS,
-      leagueID: leagueID
-    },
-  };
+// Identify league to query
+const leagueID = "NHL"
 
-  try {
-    const { data } = await axios.request(options);
-    return data;
-  } catch (error) {
-    console.error(error);
+// Query Sports Events
+await SportsEvents.getEvents(leagueID).then((events) => {
+  
+  // Check if the events are not undefined
+  if (events.data) {
+
+    // Iterate through the events data
+    events.data.forEach((event) => {
+
+      // Log the event data
+      console.log(event);
+
+    });
+
+  } else {
+    // Log an error if events data is undefined
+    console.error("events.data is undefined or null");
   }
-}
+
+});

@@ -1,28 +1,32 @@
 
 /**
- * @fileoverview Test the query to retrieve odds data from from the
- * perspective of a sport.
+ * @fileoverview Test retrieving odds data.
  */
 import 'dotenv/config';
-import * as EventOdds from "../../scripts/extract/the-odds-api/eventOdds.js" ; 
+import * as EventOdds from "../../scripts/api/the-odds-api/eventOdds.js" ; 
 
 
+// eslint-disable-next-line no-undef
 describe("The Odds API - Query event odds", function () {
 
+  // eslint-disable-next-line no-undef
   it("getEventOdds", async function () {
+  
     // Identify sport to query
     const sportKey = "icehockey_nhl";
 
     // Identify event to query
-    const eventId = "f464cdc4f84223ee32ffe89a86c8bd00";
+    const eventId = "5811c64caed1ddcb2e50cb7b2f4fda58";
 
     // Query sport odds
-    await EventOdds.getEventOdds(sportKey, eventId).then((response) => {
+    await EventOdds.getEventOdds(sportKey, eventId).then((odds) => {
 
       // Check if the sports odds are not undefined
-      expect(response.data).not.toBeUndefined();
+      // eslint-disable-next-line no-undef
+      expect(odds.data).not.toBeUndefined();
 
     });
+
   });
 
 });
