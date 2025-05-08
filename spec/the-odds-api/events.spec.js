@@ -11,6 +11,7 @@ describe("The Odds API - Query sport events", function () {
 
   // eslint-disable-next-line no-undef
   it("getEvents", async function () {
+    
     // Identify sport to query
     const sportKey = "icehockey_nhl";
 

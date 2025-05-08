@@ -10,6 +10,7 @@ describe("Sports Game Odds - Query sport events", function () {
 
   // eslint-disable-next-line no-undef
   it("Query sport events", async function () {
+    
     // Identify league to query
     const leagueID = "NHL"
 
