@@ -14,6 +14,7 @@
 #######################################
 err() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*" >&2
+  exit 1
 }
 
 #######################################
@@ -39,7 +40,6 @@ node scripts/extract/sports-game-odds/sports.js
 # Check if the script executed successfully
 if [ $? -ne 0 ]; then
   err "Failed to execute sports data extraction script"
-  exit 1
 fi
 
 # Log completion message
