@@ -2,7 +2,6 @@
 #
 # Lint the Codebase.
 
-# SHELL Scripts
 echo "Linting SHELL Scripts"
 
 # Sports Game Odds
