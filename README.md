@@ -15,7 +15,7 @@ The scripts are organized across a series of directories.
 
 ## Testing
 
-Information about **Jasmine** integration due to support for *ECMAScript (ES Modules)* modules out of the box.
+**Jasmine** is utilized to unit test the scripts due to support for *ECMAScript (ES Modules)* modules out of the box.
 
 ```sh
 # Execute Unit Tests
