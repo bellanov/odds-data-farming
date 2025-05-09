@@ -17,7 +17,7 @@ err() {
 }
 
 #######################################
-# Display log messages.
+# Display log message.
 # Globals:
 #   None
 # Arguments:
