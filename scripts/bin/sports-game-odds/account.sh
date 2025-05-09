@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Extract sports data.
+# Extract account data.
 
 
 #######################################
@@ -32,15 +32,15 @@ info() {
 
 
 # Begin script execution
-info "Starting sports data extraction..."
+info "Starting account data extraction..."
 
-# Execute the script to fetch sports data
-node scripts/extract/sports-game-odds/sports.js
+# Execute the script to fetch account data
+node scripts/api/sports-game-odds/account.js
 
 # Check if the script executed successfully
 if [ $? -ne 0 ]; then
-  err "Failed to execute sports data extraction script"
+  err "Failed to execute account data extraction script"
 fi
 
 # Log completion message
-info "Sports data extraction completed successfully."
+info "Account data extraction completed successfully."
