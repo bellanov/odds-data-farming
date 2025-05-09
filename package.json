@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "npx eslint",
+    "lint": "npx eslint ; scripts/cicd/lint.sh",
     "test": "jasmine"
   },
   "repository": {

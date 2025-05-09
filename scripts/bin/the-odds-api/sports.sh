@@ -37,7 +37,7 @@ info "Starting sports data extraction..."
 node scripts/extract/the-odds-api/sports.js
 
 # Check if the script executed successfully
-if [ $? -ne 0 ]; then
+if node scripts/extract/the-odds-api/sports.js; then
   err "Failed to execute sports data extraction script"
 fi
 
