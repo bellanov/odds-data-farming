@@ -18,7 +18,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'sports.log' }) // Log to a file
+    new winston.transports.File({ filename: 'sports_odds.log' }) // Log to a file
   ]
 });
 
