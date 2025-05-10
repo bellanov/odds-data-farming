@@ -40,6 +40,3 @@ if node scripts/extract/sports-game-odds/sports.js; then
 else
   err "Failed to execute sports data extraction script"
 fi
-
-# Log completion message
-info "Sports data extraction completed successfully."

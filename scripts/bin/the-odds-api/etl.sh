@@ -39,3 +39,17 @@ if node scripts/extract/the-odds-api/sports.js; then
 else
   err "Failed to execute sports data extraction script"
 fi
+
+# Execute the script to fetch events data
+if node scripts/extract/the-odds-api/events.js; then
+  info "Events data extraction script executed successfully"
+else
+  err "Failed to execute events data extraction script"
+fi
+
+# Execute the script to fetch events data
+if node scripts/extract/the-odds-api/eventOdds.js; then
+  info "Event odds data extraction script executed successfully"
+else
+  err "Failed to execute event odds data extraction script"
+fi

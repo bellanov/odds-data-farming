@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Extract account data.
+# Extract events data.
 
 
 #######################################
@@ -30,13 +30,12 @@ info() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*"
 }
 
-
 # Begin script execution
-info "Starting account data extraction..."
+info "Starting events data extraction..."
 
-# Execute the script to fetch account data
-if node scripts/extract/sports-game-odds/account.js; then
-  info "Account data extraction script executed successfully"
+# Execute the script to fetch events data
+if node scripts/extract/the-odds-api/eventOdds.js; then
+  info "Events data extraction script executed successfully"
 else
-  error "Account data extraction script executed successfully"
+  err "Failed to execute events data extraction script"
 fi

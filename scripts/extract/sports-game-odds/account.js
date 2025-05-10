@@ -3,7 +3,7 @@
  * @fileoverview Extract sports data.
  */
 import 'dotenv/config';
-import * as Sports from "../../api/sports-game-odds/sports.js";
+import * as Account from "../../api/sports-game-odds/account.js";
 import winston from "winston";
 
 
@@ -23,22 +23,9 @@ const logger = winston.createLogger({
 });
 
 // Query Sports
-await Sports.getSports().then((sports) => {
+await Account.getAccount().then((account) => {
 
-  // Check if the sports data is not undefined
-  if (sports.data) {
-
-    // Iterate through the sports data
-    sports.data.forEach((sport) => {
-
-      // Log the sport data
-      logger.info(`Sport: ${JSON.stringify(sport)}`);
-
-    });
-
-  } else {
-    // Log an error if sports data is undefined
-    console.error("sports.data is undefined or null");
-  }
-
+  // Log the account data
+  logger.info(`Sport: ${JSON.stringify(account.data)}`);
+  
 });

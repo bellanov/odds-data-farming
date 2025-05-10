@@ -1,6 +1,6 @@
 
 /**
- * @fileoverview Extract events data.
+ * @fileoverview Extract event odds data.
  */
 import 'dotenv/config';
 import * as Events from "../../api/the-odds-api/events.js"; 

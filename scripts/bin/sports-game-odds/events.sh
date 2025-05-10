@@ -34,12 +34,9 @@ info() {
 # Begin script execution
 info "Starting events data extraction..."
 
-# Execute the script to fetch sports data
+# Execute the script to fetch events data
 if node scripts/extract/sports-game-odds/events.js; then
   info "Events data extraction script executed successfully"
 else
   err "Failed to execute events data extraction script"
 fi
-
-# Log completion message
-info "Events data extraction completed successfully."
