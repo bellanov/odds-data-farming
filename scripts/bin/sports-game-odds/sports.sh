@@ -36,6 +36,8 @@ info "Starting sports data extraction..."
 
 # Execute the script to fetch sports data
 if node scripts/extract/sports-game-odds/sports.js; then
+  info "Sports data extraction script executed successfully"
+else
   err "Failed to execute sports data extraction script"
 fi
 

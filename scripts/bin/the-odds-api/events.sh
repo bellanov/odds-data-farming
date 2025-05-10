@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Extract sports data.
+# Extract events data.
 
 
 #######################################
@@ -32,6 +32,9 @@ info() {
 
 # Begin script execution
 info "Starting sports data extraction..."
+
+# Execute the script to fetch sports data
+node scripts/extract/the-odds-api/sports.js
 
 # Check if the script executed successfully
 if node scripts/extract/the-odds-api/sports.js; then
