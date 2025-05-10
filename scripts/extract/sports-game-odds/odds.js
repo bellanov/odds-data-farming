@@ -1,6 +1,6 @@
 
 /**
- * @fileoverview Extract sports events data.
+ * @fileoverview Extract odds data.
  */
 import 'dotenv/config';
 import * as SportsEvents from "../../api/sports-game-odds/events.js";
@@ -18,7 +18,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'events_sgo.log' }) // Log to a file
+    new winston.transports.File({ filename: 'odds_sports.log' }) // Log to a file
   ]
 });
 
@@ -36,7 +36,11 @@ await SportsEvents.getEvents(leagueID).then((events) => {
     events.data.forEach((event) => {
 
       // Log the event data
-      logger.info(`Event: ${JSON.stringify(event)}`);
+      logger.info(`eventID  : ${JSON.stringify(event.eventID)}`);
+      logger.info(`sportID  : ${JSON.stringify(event.sportID)}`);
+      logger.info(`leagueID : ${JSON.stringify(event.leagueID)}`);
+      logger.info(`odds "points-all-game-ou-over" : ${JSON.stringify(event.odds["points-all-game-ou-over"])}`);
+      logger.info(`odds  "points-all-game-ou-under"  : ${JSON.stringify(event.odds["points-all-game-ou-under"])}`);
 
     });
 
