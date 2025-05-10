@@ -26,7 +26,7 @@ const logger = winston.createLogger({
 await Sports.getSports().then((sports) => {
 
   // Check your usage
-  console.log('Remaining Requests :',sports.headers['x-requests-remaining'])
-  console.log('Used Requests      :',sports.headers['x-requests-used'])
+  console.log('Remaining Requests :', sports.headers['x-requests-remaining'])
+  console.log('Used Requests      :', sports.headers['x-requests-used'])
 
 });
