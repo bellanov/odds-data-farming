@@ -49,4 +49,7 @@ await SportsEvents.getEvents(leagueID).then((events) => {
     console.error("events.data is undefined or null");
   }
 
+}).catch((error) => {
+  // Log the error
+  logger.error(`Error fetching events: ${error.message}`);
 });

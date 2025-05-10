@@ -41,4 +41,7 @@ await Sports.getSports().then((sports) => {
     console.error("sports.data is undefined or null");
   }
 
+}).catch((error) => {
+  // Log the error
+  logger.error(`Error fetching sports: ${error.message}`);
 });

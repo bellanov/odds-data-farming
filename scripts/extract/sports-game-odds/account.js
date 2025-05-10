@@ -1,6 +1,6 @@
 
 /**
- * @fileoverview Extract sports data.
+ * @fileoverview Extract account data.
  */
 import 'dotenv/config';
 import * as Account from "../../api/sports-game-odds/account.js";
@@ -26,6 +26,9 @@ const logger = winston.createLogger({
 await Account.getAccount().then((account) => {
 
   // Log the account data
-  logger.info(`Sport: ${JSON.stringify(account.data)}`);
+  logger.info(`Account: ${JSON.stringify(account.data)}`);
   
+}).catch((error) => {
+  // Log the error
+  logger.error(`Error fetching account: ${error.message}`);
 });

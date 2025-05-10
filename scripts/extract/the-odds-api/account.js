@@ -29,4 +29,7 @@ await Sports.getSports().then((sports) => {
   console.log('Remaining Requests :', sports.headers['x-requests-remaining'])
   console.log('Used Requests      :', sports.headers['x-requests-used'])
 
+}).catch((error) => {
+  // Log the error
+  logger.error(`Error fetching sports: ${error.message}`);
 });
