@@ -8,14 +8,18 @@ This project is responsible for **farming** data from _The Odds API_ and _Sports
 
 The scripts are organized across a series of directories.
 
-| Directory      | Description                                                                          |
-| ----------- | --------------------------------------------------------------------------------------- |
-| **build**   | Scripts responsible for aspects of the CICD process.                                    |
-| **extract** | Scripts responsible for **extracting** data from _Sports Game Odds_ and _The Odds API_. |
+| Directory     | Description                                                                          |
+| -----------   | --------------------------------------------------------------------------------------- |
+| **api**       | Scripts responsible for **querying** data from _Sports Game Odds_ and _The Odds API_.   |
+| **bin**       | Scripts responsible for aspects of the **ETL** process.                                |
+| **build**     | Scripts responsible for aspects of the **CICD** process.                                |
+| **extract**   | Scripts responsible for **extracting** data from _Sports Game Odds_ and _The Odds API_. |
+| **transform** | Scripts responsible for **transforming** data from _Sports Game Odds_ and _The Odds API_. |
+| **load**      | Scripts responsible for **loading** data from _Sports Game Odds_ and _The Odds API_. |
 
 ## Testing
 
-Information about **Jasmine** integration due to support for *ECMAScript (ES Modules)* modules out of the box.
+**Jasmine** is utilized to unit test the scripts.
 
 ```sh
 # Execute Unit Tests

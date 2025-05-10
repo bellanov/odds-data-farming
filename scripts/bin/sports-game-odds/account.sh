@@ -35,11 +35,10 @@ info() {
 info "Starting account data extraction..."
 
 # Execute the script to fetch account data
-node scripts/api/sports-game-odds/account.js
-
-# Check if the script executed successfully
-if [ $? -ne 0 ]; then
-  err "Failed to execute account data extraction script"
+if node scripts/extract/sports-game-odds/account.js; then
+  info "Account data extraction script executed successfully"
+else
+  error "Account data extraction script executed successfully"
 fi
 
 # Log completion message
