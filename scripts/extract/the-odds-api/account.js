@@ -5,6 +5,7 @@
 import 'dotenv/config';
 import * as Sports from "../../api/the-odds-api/sports.js"; 
 import winston from "winston";
+import fs from "fs";
 
 
 // Configure Winston logger
@@ -18,7 +19,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'sports_odds.log' }) // Log to a file
+    new winston.transports.File({ filename: 'odds_account.log' }) // Log to a file
   ]
 });
 
@@ -28,6 +29,15 @@ await Sports.getSports().then((sports) => {
   // Check your usage
   console.log('Remaining Requests :', sports.headers['x-requests-remaining'])
   console.log('Used Requests      :', sports.headers['x-requests-used'])
+
+  const requests = {
+    remaining: sports.headers['x-requests-remaining'],
+    used: sports.headers['x-requests-used']
+  };
+
+  // Write the account information to a JSON file
+  fs.writeFileSync("odds_account.json", JSON.stringify(requests, null, 2), "utf-8");
+  logger.info("Account data successfully written to odds_account.json");
 
 }).catch((error) => {
   // Log the error
