@@ -1,9 +1,9 @@
 
 /**
- * @fileoverview Extract event odds data.
+ * @fileoverview Extract sport odds data.
  */
 import 'dotenv/config';
-import * as Events from "../../api/the-odds-api/eventOdds.js";
+import * as Sports from "../../api/the-odds-api/sportsOdds.js";
 import winston from "winston";
 import fs from "fs";
 
@@ -19,35 +19,32 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'odds_event_odds.log' }) // Log to a file
+    new winston.transports.File({ filename: 'odds_sport_odds.log' }) // Log to a file
   ]
 });
 
 // Identify sport to query
 const sportKey = "icehockey_nhl";
 
-// Identify event to query
-const eventId = "0804798016d50211ab9298d8abf13aa5";
-
 // Query Sports
-await Events.getEventOdds(sportKey, eventId).then((event) => {
+await Sports.getSportsOdds(sportKey).then((sport) => {
 
   // Check if the events data is not undefined
-  if (event.data) {
+  if (sport.data) {
 
     // Write the events object to a JSON file
-    fs.writeFileSync("odds_event_odds.json", JSON.stringify(event.data, null, 2), "utf-8");
-    logger.info("Event data successfully written to odds_event_odds.json");
+    fs.writeFileSync("odds_sport_odds.json", JSON.stringify(sport.data, null, 2), "utf-8");
+    logger.info("Event data successfully written to odds_sport_odds.json");
 
     // Log the event data
-    logger.info(`Event: ${JSON.stringify(event.data)}`);
+    logger.info(`Sport: ${JSON.stringify(sport.data)}`);
 
   } else {
     // Log an error if events data is undefined
-    console.error("events.data is undefined or null");
+    console.error("sport.data is undefined or null");
   }
 
 }).catch((error) => {
   // Log the error
-  logger.error(`Error fetching events: ${error.message}`);
+  logger.error(`Error fetching sport: ${error.message}`);
 });
