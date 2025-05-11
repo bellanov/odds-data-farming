@@ -5,6 +5,7 @@
 import 'dotenv/config';
 import * as Sports from "../../api/sports-game-odds/sports.js";
 import winston from "winston";
+import fs from "fs";
 
 
 // Configure Winston logger
@@ -18,7 +19,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'sports_sgo.log' }) // Log to a file
+    new winston.transports.File({ filename: 'sgo_sports.log' }) // Log to a file
   ]
 });
 
@@ -27,6 +28,10 @@ await Sports.getSports().then((sports) => {
 
   // Check if the sports data is not undefined
   if (sports.data) {
+
+    // Write the sports data to a JSON file
+    fs.writeFileSync("sgo_sports.json", JSON.stringify(sports.data, null, 2), "utf-8");
+    logger.info("Sports data successfully written to sgo_sports.json");
 
     // Iterate through the sports data
     sports.data.forEach((sport) => {
@@ -41,4 +46,7 @@ await Sports.getSports().then((sports) => {
     console.error("sports.data is undefined or null");
   }
 
+}).catch((error) => {
+  // Log the error
+  logger.error(`Error fetching sports: ${error.message}`);
 });

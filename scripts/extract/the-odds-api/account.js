@@ -19,32 +19,25 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'odds_sports.log' }) // Log to a file
+    new winston.transports.File({ filename: 'odds_account.log' }) // Log to a file
   ]
 });
 
 // Query Sports
 await Sports.getSports().then((sports) => {
 
-  // Check if the sports data is not undefined
-  if (sports.data) {
+  // Check your usage
+  console.log('Remaining Requests :', sports.headers['x-requests-remaining'])
+  console.log('Used Requests      :', sports.headers['x-requests-used'])
 
-    // Write the sports data to a JSON file
-    fs.writeFileSync("odds_sports.json", JSON.stringify(sports.data, null, 2), "utf-8");
-    logger.info("Sports data successfully written to odds_sports.json");
+  const requests = {
+    remaining: sports.headers['x-requests-remaining'],
+    used: sports.headers['x-requests-used']
+  };
 
-    // Iterate through the sports data
-    sports.data.forEach((sport) => {
-
-      // Log the sport data
-      logger.info(`Sport: ${JSON.stringify(sport)}`);
-
-    });
-
-  } else {
-    // Log an error if sports data is undefined
-    console.error("sports.data is undefined or null");
-  }
+  // Write the account information to a JSON file
+  fs.writeFileSync("odds_account.json", JSON.stringify(requests, null, 2), "utf-8");
+  logger.info("Account data successfully written to odds_account.json");
 
 }).catch((error) => {
   // Log the error

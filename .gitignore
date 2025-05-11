@@ -180,5 +180,6 @@ dist
 /diagrams/*.png.bkp
 /diagrams/*.png.dtmp
 
-# dotenv
-.env
+# Data files
+odds_*.json
+sgo_*.json
