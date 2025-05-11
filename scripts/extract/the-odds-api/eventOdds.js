@@ -27,7 +27,7 @@ const logger = winston.createLogger({
 const sportKey = "icehockey_nhl";
 
 // Identify event to query
-const eventId = "0804798016d50211ab9298d8abf13aa5";
+const eventId = "2e582b23e4c9502edb96da529f9d2891";
 
 // Query Sports
 await Events.getEventOdds(sportKey, eventId).then((event) => {

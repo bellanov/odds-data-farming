@@ -19,7 +19,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: 'sgo_odds.log' }) // Log to a file
+    new winston.transports.File({ filename: 'sgo_events.log' }) // Log to a file
   ]
 });
 
@@ -33,9 +33,9 @@ await SportsEvents.getEvents(leagueID).then((events) => {
   // Check if the events are not undefined
   if (events.data) {
 
-    
-
-    let odds = {};
+    // Write the events object to a JSON file
+    fs.writeFileSync("sgo_events.json", JSON.stringify(events.data, null, 2), "utf-8");
+    logger.info("Events data successfully written to sgo_events.json");
 
     // Iterate through the events data
     events.data.forEach((event) => {
@@ -44,21 +44,10 @@ await SportsEvents.getEvents(leagueID).then((events) => {
       logger.info(`eventID  : ${JSON.stringify(event.eventID)}`);
       logger.info(`sportID  : ${JSON.stringify(event.sportID)}`);
       logger.info(`leagueID : ${JSON.stringify(event.leagueID)}`);
-      // logger.info(`Odds : ${JSON.stringify(Object.keys(event.odds).length)}`);
-
-      odds[event.eventID] = [];
-
-      Object.keys(event.odds).forEach((key) => {
-        logger.info(`odds [${event.eventID}] : ${JSON.stringify(event.odds[key])}`);
-        odds[event.eventID].push(event.odds[key]);
-      });
-
+      logger.info(`odds "points-all-game-ou-over" : ${JSON.stringify(event.odds["points-all-game-ou-over"])}`);
+      logger.info(`odds  "points-all-game-ou-under"  : ${JSON.stringify(event.odds["points-all-game-ou-under"])}`);
 
     });
-
-    // Write the events object to a JSON file
-    fs.writeFileSync("sgo_odds.json", JSON.stringify(odds, null, 2), "utf-8");
-    logger.info("Event odds data successfully written to sgo_odds.json");
 
   } else {
     // Log an error if events data is undefined

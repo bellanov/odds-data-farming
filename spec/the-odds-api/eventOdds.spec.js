@@ -16,7 +16,7 @@ describe("The Odds API - Query event odds", function () {
     const sportKey = "icehockey_nhl";
 
     // Identify event to query
-    const eventId = "0804798016d50211ab9298d8abf13aa5";
+    const eventId = "2e582b23e4c9502edb96da529f9d2891";
 
     // Query sport odds
     await EventOdds.getEventOdds(sportKey, eventId).then((odds) => {
