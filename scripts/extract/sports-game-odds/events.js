@@ -44,8 +44,7 @@ await SportsEvents.getEvents(leagueID).then((events) => {
       logger.info(`eventID  : ${JSON.stringify(event.eventID)}`);
       logger.info(`sportID  : ${JSON.stringify(event.sportID)}`);
       logger.info(`leagueID : ${JSON.stringify(event.leagueID)}`);
-      logger.info(`odds "points-all-game-ou-over" : ${JSON.stringify(event.odds["points-all-game-ou-over"])}`);
-      logger.info(`odds  "points-all-game-ou-under"  : ${JSON.stringify(event.odds["points-all-game-ou-under"])}`);
+      logger.info("------------------------------------");
 
     });
 

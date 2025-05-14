@@ -33,9 +33,8 @@ await SportsEvents.getEvents(leagueID).then((events) => {
   // Check if the events are not undefined
   if (events.data) {
 
-    
-
-    let odds = {};
+    // Store odds data
+    let odds = [];
 
     // Iterate through the events data
     events.data.forEach((event) => {
@@ -44,15 +43,19 @@ await SportsEvents.getEvents(leagueID).then((events) => {
       logger.info(`eventID  : ${JSON.stringify(event.eventID)}`);
       logger.info(`sportID  : ${JSON.stringify(event.sportID)}`);
       logger.info(`leagueID : ${JSON.stringify(event.leagueID)}`);
-      // logger.info(`Odds : ${JSON.stringify(Object.keys(event.odds).length)}`);
+      logger.info(`Odds     : ${JSON.stringify(Object.keys(event.odds).length)}`);      
+      logger.info("------------------------------------");
 
-      odds[event.eventID] = [];
+      // Extract relevant data
+      const odd = {
+        "eventID" : event.eventID,
+        "sportID" : event.sportID,
+        "leagueID" : event.leagueID,
+        "odds" : event.odds
+      };
 
-      Object.keys(event.odds).forEach((key) => {
-        logger.info(`odds [${event.eventID}] : ${JSON.stringify(event.odds[key])}`);
-        odds[event.eventID].push(event.odds[key]);
-      });
-
+      // Store the odds data
+      odds.push(odd);
 
     });
 

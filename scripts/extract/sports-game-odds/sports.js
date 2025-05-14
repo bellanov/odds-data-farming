@@ -33,13 +33,11 @@ await Sports.getSports().then((sports) => {
     fs.writeFileSync("sgo_sports.json", JSON.stringify(sports.data, null, 2), "utf-8");
     logger.info("Sports data successfully written to sgo_sports.json");
 
-    // Iterate through the sports data
-    sports.data.forEach((sport) => {
+    // Extract the league IDs
+    let league_ids = sports.data.map((sport) => sport.leagueID);
 
-      // Log the sport data
-      logger.info(`Sport: ${JSON.stringify(sport)}`);
-
-    });
+    // Log the league IDs
+    logger.info(`league_ids: ${JSON.stringify(league_ids)}`);
 
   } else {
     // Log an error if sports data is undefined

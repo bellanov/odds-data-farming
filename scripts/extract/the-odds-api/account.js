@@ -30,6 +30,7 @@ await Sports.getSports().then((sports) => {
   console.log('Remaining Requests :', sports.headers['x-requests-remaining'])
   console.log('Used Requests      :', sports.headers['x-requests-used'])
 
+  // Extract usage information
   const requests = {
     remaining: sports.headers['x-requests-remaining'],
     used: sports.headers['x-requests-used']
