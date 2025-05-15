@@ -1,7 +1,7 @@
 /**
  * @fileoverview Query events data from The Odds API.
  */
-import 'dotenv/config';
+import "dotenv/config";
 import axios from "axios";
 
 /**
@@ -12,8 +12,9 @@ export function getEvents(sportKey) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
-  
-  const events = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events`, {
+
+  const events = axios
+    .get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events`, {
       params: {
         apiKey,
       },
@@ -26,5 +27,5 @@ export function getEvents(sportKey) {
       console.log(error.response.data);
     });
 
-    return events;
+  return events;
 }

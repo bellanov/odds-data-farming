@@ -14,7 +14,9 @@ export function getEventOdds(sportKey, eventId) {
   const apiKey = process.env.THE_ODDS_API;
 
   if (!apiKey) {
-    throw new Error("API key is missing. Please set THE_ODDS_API in your .env file.");
+    throw new Error(
+      "API key is missing. Please set THE_ODDS_API in your .env file.",
+    );
   }
 
   // uk | us | eu | au. Multiple can be specified if comma delimited
@@ -29,15 +31,19 @@ export function getEventOdds(sportKey, eventId) {
   // iso | unix
   const dateFormat = "iso";
 
-  const eventOdds = axios.get(`https://api.the-odds-api.com/v4/sports/${sportKey}/events/${eventId}/odds`, {
-      params: {
-        apiKey,
-        dateFormat,
-        markets,
-        oddsFormat,
-        regions
-      }
-    })
+  const eventOdds = axios
+    .get(
+      `https://api.the-odds-api.com/v4/sports/${sportKey}/events/${eventId}/odds`,
+      {
+        params: {
+          apiKey,
+          dateFormat,
+          markets,
+          oddsFormat,
+          regions,
+        },
+      },
+    )
     .then((response) => {
       return response;
     })
@@ -46,5 +52,5 @@ export function getEventOdds(sportKey, eventId) {
       console.log(error.response.data);
     });
 
-    return eventOdds;
+  return eventOdds;
 }

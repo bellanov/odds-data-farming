@@ -1,32 +1,21 @@
-
 /**
  * @fileoverview Test retrieving odds data.
  */
-import 'dotenv/config';
-import * as EventOdds from "../../scripts/api/the-odds-api/eventOdds.js" ; 
-
+import "dotenv/config";
+import * as SportsOdds from "../scripts/api/sportsOdds.js";
 
 // eslint-disable-next-line no-undef
-describe("The Odds API - Query event odds", function () {
-
+describe("The Odds API - Query sports odds", function () {
   // eslint-disable-next-line no-undef
-  it("getEventOdds", async function () {
-  
+  it("getSportsOdds", async function () {
     // Identify sport to query
     const sportKey = "icehockey_nhl";
 
-    // Identify event to query
-    const eventId = "2e582b23e4c9502edb96da529f9d2891";
-
     // Query sport odds
-    await EventOdds.getEventOdds(sportKey, eventId).then((odds) => {
-
+    await SportsOdds.getSportsOdds(sportKey).then((odds) => {
       // Check if the sports odds are not undefined
       // eslint-disable-next-line no-undef
       expect(odds.data).not.toBeUndefined();
-
     });
-
   });
-
 });
