@@ -1,122 +1,28 @@
 [
   {
-    "id": "0421c85b75253b2c5ab39f394ecb59f4",
-    "sport_key": "icehockey_nhl",
-    "sport_title": "NHL",
-    "commence_time": "2025-05-14T23:12:03Z",
-    "home_team": "Toronto Maple Leafs",
-    "away_team": "Florida Panthers",
-    "bookmakers": [
-      {
-        "key": "betmgm",
-        "title": "BetMGM",
-        "last_update": "2025-05-15T01:03:27Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
-            "outcomes": [
-              {
-                "name": "Florida Panthers",
-                "price": 1.01
-              },
-              {
-                "name": "Toronto Maple Leafs",
-                "price": 34
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "fanatics",
-        "title": "Fanatics",
-        "last_update": "2025-05-15T01:03:28Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
-            "outcomes": [
-              {
-                "name": "Florida Panthers",
-                "price": 1
-              },
-              {
-                "name": "Toronto Maple Leafs",
-                "price": 51
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "8bc67f62969a31cf08fd993eec244007",
     "sport_key": "icehockey_nhl",
     "sport_title": "NHL",
-    "commence_time": "2025-05-15T01:40:00Z",
+    "commence_time": "2025-05-15T01:52:30Z",
     "home_team": "Vegas Golden Knights",
     "away_team": "Edmonton Oilers",
     "bookmakers": [
       {
         "key": "draftkings",
         "title": "DraftKings",
-        "last_update": "2025-05-15T01:02:10Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Edmonton Oilers",
-                "price": 1.98
+                "price": 1.83
               },
               {
                 "name": "Vegas Golden Knights",
-                "price": 1.85
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "betonlineag",
-        "title": "BetOnline.ag",
-        "last_update": "2025-05-15T01:03:27Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
-            "outcomes": [
-              {
-                "name": "Edmonton Oilers",
-                "price": 2.04
-              },
-              {
-                "name": "Vegas Golden Knights",
-                "price": 1.85
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "lowvig",
-        "title": "LowVig.ag",
-        "last_update": "2025-05-15T01:03:27Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
-            "outcomes": [
-              {
-                "name": "Edmonton Oilers",
-                "price": 2.04
-              },
-              {
-                "name": "Vegas Golden Knights",
-                "price": 1.85
+                "price": 1.91
               }
             ]
           }
@@ -125,78 +31,15 @@
       {
         "key": "betmgm",
         "title": "BetMGM",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Edmonton Oilers",
-                "price": 2
-              },
-              {
-                "name": "Vegas Golden Knights",
-                "price": 1.83
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "fanduel",
-        "title": "FanDuel",
-        "last_update": "2025-05-15T01:03:28Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
-            "outcomes": [
-              {
-                "name": "Edmonton Oilers",
-                "price": 2
-              },
-              {
-                "name": "Vegas Golden Knights",
-                "price": 1.83
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "betrivers",
-        "title": "BetRivers",
-        "last_update": "2025-05-15T01:03:27Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
-            "outcomes": [
-              {
-                "name": "Edmonton Oilers",
-                "price": 2.08
-              },
-              {
-                "name": "Vegas Golden Knights",
-                "price": 1.77
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "key": "betus",
-        "title": "BetUS",
-        "last_update": "2025-05-15T01:03:27Z",
-        "markets": [
-          {
-            "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
-            "outcomes": [
-              {
-                "name": "Edmonton Oilers",
-                "price": 1.95
+                "price": 1.91
               },
               {
                 "name": "Vegas Golden Knights",
@@ -207,13 +50,34 @@
         ]
       },
       {
-        "key": "mybookieag",
-        "title": "MyBookie.ag",
-        "last_update": "2025-05-15T01:02:10Z",
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:47:18Z",
+            "outcomes": [
+              {
+                "name": "Edmonton Oilers",
+                "price": 1.87
+              },
+              {
+                "name": "Vegas Golden Knights",
+                "price": 1.9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": "2025-05-15T03:46:04Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:46:04Z",
             "outcomes": [
               {
                 "name": "Edmonton Oilers",
@@ -221,7 +85,7 @@
               },
               {
                 "name": "Vegas Golden Knights",
-                "price": 1.78
+                "price": 1.75
               }
             ]
           }
@@ -230,19 +94,19 @@
       {
         "key": "bovada",
         "title": "Bovada",
-        "last_update": "2025-05-15T01:02:15Z",
+        "last_update": "2025-05-15T03:47:20Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:15Z",
+            "last_update": "2025-05-15T03:47:20Z",
             "outcomes": [
               {
                 "name": "Edmonton Oilers",
-                "price": 2.02
+                "price": 1.87
               },
               {
                 "name": "Vegas Golden Knights",
-                "price": 1.82
+                "price": 1.87
               }
             ]
           }
@@ -251,19 +115,19 @@
       {
         "key": "fanatics",
         "title": "Fanatics",
-        "last_update": "2025-05-15T01:03:28Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Edmonton Oilers",
-                "price": 2.05
+                "price": 1.8
               },
               {
                 "name": "Vegas Golden Knights",
-                "price": 1.8
+                "price": 1.95
               }
             ]
           }
@@ -282,11 +146,11 @@
       {
         "key": "draftkings",
         "title": "DraftKings",
-        "last_update": "2025-05-15T01:02:10Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -303,11 +167,11 @@
       {
         "key": "fanduel",
         "title": "FanDuel",
-        "last_update": "2025-05-15T01:03:28Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -324,11 +188,11 @@
       {
         "key": "betrivers",
         "title": "BetRivers",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -345,11 +209,11 @@
       {
         "key": "betmgm",
         "title": "BetMGM",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -366,11 +230,11 @@
       {
         "key": "betus",
         "title": "BetUS",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:46:05Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:46:05Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -387,19 +251,19 @@
       {
         "key": "mybookieag",
         "title": "MyBookie.ag",
-        "last_update": "2025-05-15T01:02:10Z",
+        "last_update": "2025-05-15T03:46:04Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:46:04Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
-                "price": 1.58
+                "price": 1.57
               },
               {
                 "name": "Washington Capitals",
-                "price": 2.34
+                "price": 2.36
               }
             ]
           }
@@ -408,11 +272,11 @@
       {
         "key": "betonlineag",
         "title": "BetOnline.ag",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -429,11 +293,11 @@
       {
         "key": "lowvig",
         "title": "LowVig.ag",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -450,11 +314,11 @@
       {
         "key": "fanatics",
         "title": "Fanatics",
-        "last_update": "2025-05-15T01:03:28Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -471,11 +335,11 @@
       {
         "key": "bovada",
         "title": "Bovada",
-        "last_update": "2025-05-15T01:02:15Z",
+        "last_update": "2025-05-15T03:47:20Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:15Z",
+            "last_update": "2025-05-15T03:47:20Z",
             "outcomes": [
               {
                 "name": "Carolina Hurricanes",
@@ -483,7 +347,7 @@
               },
               {
                 "name": "Washington Capitals",
-                "price": 2.37
+                "price": 2.4
               }
             ]
           }
@@ -502,11 +366,11 @@
       {
         "key": "draftkings",
         "title": "DraftKings",
-        "last_update": "2025-05-15T01:02:10Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -523,11 +387,11 @@
       {
         "key": "lowvig",
         "title": "LowVig.ag",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -544,11 +408,11 @@
       {
         "key": "betonlineag",
         "title": "BetOnline.ag",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:17Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:17Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -565,11 +429,11 @@
       {
         "key": "betmgm",
         "title": "BetMGM",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -586,11 +450,11 @@
       {
         "key": "fanduel",
         "title": "FanDuel",
-        "last_update": "2025-05-15T01:03:28Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -607,11 +471,11 @@
       {
         "key": "betrivers",
         "title": "BetRivers",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -628,11 +492,11 @@
       {
         "key": "betus",
         "title": "BetUS",
-        "last_update": "2025-05-15T01:03:27Z",
+        "last_update": "2025-05-15T03:46:05Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:27Z",
+            "last_update": "2025-05-15T03:46:05Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -649,11 +513,11 @@
       {
         "key": "mybookieag",
         "title": "MyBookie.ag",
-        "last_update": "2025-05-15T01:02:10Z",
+        "last_update": "2025-05-15T03:46:04Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:10Z",
+            "last_update": "2025-05-15T03:46:04Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -670,11 +534,11 @@
       {
         "key": "fanatics",
         "title": "Fanatics",
-        "last_update": "2025-05-15T01:03:28Z",
+        "last_update": "2025-05-15T03:47:18Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:03:28Z",
+            "last_update": "2025-05-15T03:47:18Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -691,11 +555,11 @@
       {
         "key": "bovada",
         "title": "Bovada",
-        "last_update": "2025-05-15T01:02:15Z",
+        "last_update": "2025-05-15T03:47:20Z",
         "markets": [
           {
             "key": "h2h",
-            "last_update": "2025-05-15T01:02:15Z",
+            "last_update": "2025-05-15T03:47:20Z",
             "outcomes": [
               {
                 "name": "Dallas Stars",
@@ -704,6 +568,184 @@
               {
                 "name": "Winnipeg Jets",
                 "price": 1.85
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "337a07dff906009f28eac9a687f15107",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2025-05-16T23:10:00Z",
+    "home_team": "Florida Panthers",
+    "away_team": "Toronto Maple Leafs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-05-15T03:47:17Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:17Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.41
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2025-05-15T03:47:18Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:18Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.41
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 2.98
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "last_update": "2025-05-15T03:47:17Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:17Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.43
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 3.04
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "lowvig",
+        "title": "LowVig.ag",
+        "last_update": "2025-05-15T03:47:17Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:17Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.43
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 3.04
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "last_update": "2025-05-15T03:47:18Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:18Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.4
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betus",
+        "title": "BetUS",
+        "last_update": "2025-05-15T03:46:05Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:46:05Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.43
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 2.95
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": "2025-05-15T03:46:04Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:46:04Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.4
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 2.91
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "last_update": "2025-05-15T03:47:18Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-05-15T03:47:18Z",
+            "outcomes": [
+              {
+                "name": "Florida Panthers",
+                "price": 1.48
+              },
+              {
+                "name": "Toronto Maple Leafs",
+                "price": 2.7
               }
             ]
           }
