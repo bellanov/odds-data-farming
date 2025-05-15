@@ -6,7 +6,18 @@ This project is responsible for **farming** data from _The Odds API_.
 
 ## Dependencies
 
-This project farms sports data from a premium data broker called **The Odds API**. In order for the scripts to execute successfully, the appropriate *authentication* token should be established within an environments file `.env`.
+This project farms sports data from a premium data broker called **[The Odds API](https://the-odds-api.com/)**.
+
+In order for the scripts to execute successfully, the appropriate _authentication_ token should be established within an environments file `.env`, exemplified below.
+
+```sh
+#
+# Define Environment Variables.
+#
+
+# Sports Data APIs
+THE_ODDS_API="<API_TOKEN>"
+```
 
 ## Scripts
 
@@ -33,12 +44,12 @@ npm run <TASK>
 npm run odds-etl
 ```
 
-| Task     | Description                                                        |
-| ------------- | ------------------------------------------------------------------ |
-| **lint**       | Lint the codebase with *ESLint* and *Prettier*.     |
-| **odds-etl**       | Execute entire *Extract, Transform, and Load (ETL)* workflow.     |
-| **odds-events**       | Query *events* data.     |
-| **odds-sports**       | Query *sports* data.     |
-| **prettier**       | Execute *Prettier* on the codebase.     |
-| **prettier-check**       | Check if *Prettier* was executed on the codebase.     |
-| **test**       | Execute unit tests powered by *Jasmine*.     |
+| Task               | Description                                                   |
+| ------------------ | ------------------------------------------------------------- |
+| **lint**           | Lint the codebase with _ESLint_ and _Prettier_.               |
+| **odds-etl**       | Execute entire _Extract, Transform, and Load (ETL)_ workflow. |
+| **odds-events**    | Query _events_ data.                                          |
+| **odds-sports**    | Query _sports_ data.                                          |
+| **prettier**       | Execute _Prettier_ on the codebase.                           |
+| **prettier-check** | Check if _Prettier_ was executed on the codebase.             |
+| **test**           | Execute unit tests powered by _Jasmine_.                      |
