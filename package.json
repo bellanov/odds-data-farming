@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "ci": "npm run lint && npm run prettier-check && npm run test",
     "etl": "rm -rf data/*; scripts/bin/etl.sh",
     "lint": "npx eslint ; scripts/cicd/lint.sh",
     "prettier": "npx prettier . --write",

@@ -4,10 +4,7 @@
 
 echo "Linting SHELL Scripts"
 
-# Sports Game Odds
-shellcheck scripts/bin/sports-game-odds/*
-
 # The Odds API
-shellcheck scripts/bin/the-odds-api/*
+shellcheck scripts/bin/*
 
 echo "Linting SHELL Scripts completed"
