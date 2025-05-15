@@ -1,5 +1,7 @@
 /**
  * @fileoverview Extract event odds data.
+ * @description This script queries event odds data from The Odds API and logs the results.
+ * It retrieves event odds data for a specific sport and event, and logs the event information.
  */
 import * as Events from "../../scripts/api/eventOdds.js";
 import winston from "winston";

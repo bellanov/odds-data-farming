@@ -1,5 +1,7 @@
 /**
- * @fileoverview Extract sports data.
+ * @fileoverview Extract account data.
+ * @description This script queries account data from The Odds API and logs the results.
+ * It retrieves account data from sports and logs the account information.
  */
 import * as Sports from "../../scripts/api/sports.js";
 import winston from "winston";

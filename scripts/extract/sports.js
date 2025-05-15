@@ -1,5 +1,7 @@
 /**
  * @fileoverview Extract sports data.
+ * @description This script queries sports data from The Odds API and logs the results.
+ * It retrieves sports data and logs the sport information.
  */
 import * as Sports from "../../scripts/api/sports.js";
 import winston from "winston";
