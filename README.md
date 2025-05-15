@@ -4,6 +4,10 @@ This project is responsible for **farming** data from _The Odds API_.
 
 ![Odds Data Scraping Diagram](./diagrams/odds.png "Odds Data Scraping Diagram")
 
+## Dependencies
+
+This project farms sports data from a premium data broker called **The Odds API**. In order for the scripts to execute successfully, the appropriate *authentication* token should be established within an environments file `.env`.
+
 ## Scripts
 
 The scripts are organized across a series of directories.
@@ -21,11 +25,20 @@ The scripts are organized across a series of directories.
 
 Summarize NPM tasks and their usage.
 
-## Testing
-
-**Jasmine** is utilized to unit test the scripts.
-
 ```sh
-# Execute Unit Tests
-npm test
+# Execute Task
+npm run <TASK>
+
+# Execute entire *Extract, Transform, and Load (ETL)* workflow.
+npm run odds-etl
 ```
+
+| Task     | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| **lint**       | Lint the codebase with *ESLint* and *Prettier*.     |
+| **odds-etl**       | Execute entire *Extract, Transform, and Load (ETL)* workflow.     |
+| **odds-events**       | Query *events* data.     |
+| **odds-sports**       | Query *sports* data.     |
+| **prettier**       | Execute *Prettier* on the codebase.     |
+| **prettier-check**       | Check if *Prettier* was executed on the codebase.     |
+| **test**       | Execute unit tests powered by *Jasmine*.     |
