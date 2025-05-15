@@ -2,7 +2,7 @@
  * @fileoverview Extract event odds data.
  */
 import "dotenv/config";
-import * as Events from "../../api/eventOdds.js";
+import * as Events from "../../scripts/api/eventOdds.js";
 import winston from "winston";
 import fs from "fs";
 

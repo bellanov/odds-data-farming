@@ -2,7 +2,7 @@
  * @fileoverview Extract sports data.
  */
 import "dotenv/config";
-import * as Sports from "../../api/sports.js";
+import * as Sports from "../../scripts/api/sports.js";
 import winston from "winston";
 import fs from "fs";
 

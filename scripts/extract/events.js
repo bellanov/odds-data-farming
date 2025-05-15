@@ -2,7 +2,7 @@
  * @fileoverview Extract events data.
  */
 import "dotenv/config";
-import * as Events from "../../api/events.js";
+import * as Events from "../../scripts/api/events.js";
 import winston from "winston";
 import fs from "fs";
 

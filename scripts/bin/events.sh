@@ -30,12 +30,11 @@ info() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*"
 }
 
-
 # Begin script execution
 info "Starting events data extraction..."
 
 # Execute the script to fetch events data
-if node scripts/extract/sports-game-odds/events.js; then
+if node scripts/extract/events.js; then
   info "Events data extraction script executed successfully"
 else
   err "Failed to execute events data extraction script"

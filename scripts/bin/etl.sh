@@ -31,11 +31,19 @@ info() {
 }
 
 # Begin script execution
-info "Starting sports data extraction..."
+info "Executing ETL Process..."
 
 # Execute the script to fetch sports data
-if node scripts/extract/the-odds-api/sports.js; then
-  info "Sports data extraction script executed successfully"
-else
-  err "Failed to execute sports data extraction script"
-fi
+scripts/bin/sports.sh
+
+# Execute the script to fetch events data
+scripts/bin/events.sh
+
+# Execute the script to fetch event odds data
+scripts/bin/eventOdds.sh
+
+# Execute the script to fetch account data
+scripts/bin/account.sh
+
+# Log the completion of the ETL process
+info "ETL Process Completed."
