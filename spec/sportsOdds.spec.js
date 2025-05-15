@@ -1,7 +1,6 @@
 /**
  * @fileoverview Test retrieving odds data.
  */
-import "dotenv/config";
 import * as SportsOdds from "../scripts/api/sportsOdds.js";
 
 // eslint-disable-next-line no-undef

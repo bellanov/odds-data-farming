@@ -39,6 +39,9 @@ scripts/bin/sports.sh
 # Execute the script to fetch events data
 scripts/bin/events.sh
 
+# Execute the script to fetch sport odds data
+scripts/bin/sportOdds.sh
+
 # Execute the script to fetch event odds data
 scripts/bin/eventOdds.sh
 

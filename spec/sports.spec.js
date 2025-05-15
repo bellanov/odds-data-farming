@@ -1,7 +1,6 @@
 /**
  * @fileoverview Test retrieving sports data.
  */
-import "dotenv/config";
 import * as Sports from "../scripts/api/sports.js";
 
 // eslint-disable-next-line no-undef

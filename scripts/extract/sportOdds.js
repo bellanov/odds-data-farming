@@ -1,8 +1,7 @@
 /**
  * @fileoverview Extract sport odds data.
  */
-import "dotenv/config";
-import * as Sports from "../../api/sportsOdds.js";
+import * as Sports from "../../scripts/api/sportsOdds.js";
 import winston from "winston";
 import fs from "fs";
 
@@ -17,7 +16,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: "odds_sport_odds.log" }), // Log to a file
+    new winston.transports.File({ filename: "sport_odds.log" }), // Log to a file
   ],
 });
 
@@ -31,7 +30,7 @@ await Sports.getSportsOdds(sportKey)
     if (sport.data) {
       // Write the events object to a JSON file
       fs.writeFileSync(
-        "odds_sport_odds.json",
+        "data/sport_odds.json",
         JSON.stringify(sport.data, null, 2),
         "utf-8",
       );

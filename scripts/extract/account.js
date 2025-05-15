@@ -1,7 +1,6 @@
 /**
  * @fileoverview Extract sports data.
  */
-import "dotenv/config";
 import * as Sports from "../../scripts/api/sports.js";
 import winston from "winston";
 import fs from "fs";
@@ -17,7 +16,7 @@ const logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.Console(), // Log to the console
-    new winston.transports.File({ filename: "odds_account.log" }), // Log to a file
+    new winston.transports.File({ filename: "account.log" }), // Log to a file
   ],
 });
 
@@ -36,7 +35,7 @@ await Sports.getSports()
 
     // Write the account information to a JSON file
     fs.writeFileSync(
-      "odds_account.json",
+      "data/account.json",
       JSON.stringify(requests, null, 2),
       "utf-8",
     );

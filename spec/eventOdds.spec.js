@@ -1,7 +1,6 @@
 /**
  * @fileoverview Test retrieving odds data.
  */
-import "dotenv/config";
 import * as EventOdds from "../scripts/api/eventOdds.js";
 
 // eslint-disable-next-line no-undef
