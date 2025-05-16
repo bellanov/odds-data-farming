@@ -8,13 +8,13 @@ describe("The Odds API - Query event odds", function () {
   // eslint-disable-next-line no-undef
   it("getEventOdds", async function () {
     // Identify sport to query
-    const sportKey = "icehockey_nhl";
+    const sportKey = "mma_mixed_martial_arts";
 
     // Identify event to query
-    const eventId = "1788c3241e069a3d1d6a0de166535580";
+    const eventId = "e97aca6d3ad950770d7d0b00976f948b";
 
     // Query sport odds
-    await EventOdds.getEventOdds(sportKey, eventId).then((odds) => {
+    EventOdds.getEventOdds(sportKey, eventId).then((odds) => {
       // Check if the sports odds are not undefined
       // eslint-disable-next-line no-undef
       expect(odds.data).not.toBeUndefined();

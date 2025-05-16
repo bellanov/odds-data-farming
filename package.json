@@ -6,9 +6,11 @@
   "type": "module",
   "scripts": {
     "lint": "npx eslint ; scripts/cicd/lint.sh",
-    "odds-events": "scripts/bin/events.sh",
-    "odds-sports": "scripts/bin/sports.sh",
-    "odds-etl": "rm -rf data/*; scripts/bin/etl.sh",
+    "odds-account": "rm -rf data/account.json account.log; scripts/bin/account.sh",
+    "odds-events": "rm -rf data/events.json events.log; scripts/bin/events.sh",
+    "odds-sports": "rm -rf data/sports.json sports.log; scripts/bin/sports.sh",
+    "odds-event-odds": "rm -rf data/event_odds.json event_odds.log; scripts/bin/eventOdds.sh",
+    "odds-sport-odds": "rm -rf data/sport_odds.json sport_odds.log; scripts/bin/sportOdds.sh",
     "prettier": "npx prettier . --write",
     "prettier-check": "npx prettier . --check",
     "test": "jasmine"

@@ -183,3 +183,4 @@ dist
 # Data files
 odds_*.json
 sgo_*.json
+data/
