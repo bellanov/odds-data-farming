@@ -10,7 +10,7 @@ import fs from "fs";
 
 // Delay function to avoid rate limiting
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-let rateLimit = 1000; // Rate limit in milliseconds (1 second)
+let rateLimit = 0; // Rate limit in milliseconds (1 second)
 
 // Configure Winston logger
 const logger = winston.createLogger({
@@ -27,11 +27,11 @@ const logger = winston.createLogger({
   ],
 });
 
-async function fetchEventsWithDelay(sportKey) {
+export async function fetchEventsWithDelay(sportKey) {
   // Delay to avoid rate limiting
   await delay((rateLimit += 500)); // Increase delay for each request
 
-  // Query Sports
+  // Query Events
   Events.getEvents(sportKey)
     .then((events) => {
       // Check if the events data is not undefined
@@ -47,8 +47,9 @@ async function fetchEventsWithDelay(sportKey) {
         // Iterate through the events data
         events.data.forEach((event) => {
           // Log the event data
-          logger.info(`Event Id   : ${JSON.stringify(event.id)}`);
+          logger.info(`ID         : ${JSON.stringify(event.id)}`);
           logger.info(`Sport      : ${JSON.stringify(event.sport_title)}`);
+          logger.info(`Key        : ${JSON.stringify(event.sport_key)}`);
           logger.info(`Home Team  : ${JSON.stringify(event.home_team)}`);
           logger.info(`Away Team  : ${JSON.stringify(event.away_team)}`);
           logger.info(`Event Date : ${JSON.stringify(event.commence_time)}`);

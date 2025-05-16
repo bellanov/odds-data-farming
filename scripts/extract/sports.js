@@ -22,30 +22,33 @@ const logger = winston.createLogger({
   ],
 });
 
-// Query Sports
-await Sports.getSports()
-  .then((sports) => {
-    // Check if the sports data is not undefined
-    if (sports.data) {
-      // Write the sports data to a JSON file
-      fs.writeFileSync(
-        "data/sports.json",
-        JSON.stringify(sports.data, null, 2),
-        "utf-8",
-      );
-      logger.info("Sports data successfully written to odds_sports.json");
+export async function getSports() {
+  // Query Sports
+  await Sports.getSports()
+    .then((sports) => {
+      // Check if the sports data is not undefined
+      if (sports.data) {
+        // Write the sports data to a JSON file
+        fs.writeFileSync(
+          "data/sports.json",
+          JSON.stringify(sports.data, null, 2),
+          "utf-8",
+        );
+        logger.info("Sports data successfully written to odds_sports.json");
 
-      // Iterate through the sports data
-      sports.data.forEach((sport) => {
-        // Log the sport data
-        logger.info(`Sport: ${JSON.stringify(sport)}`);
-      });
-    } else {
-      // Log an error if sports data is undefined
-      console.error("sports.data is undefined or null");
-    }
-  })
-  .catch((error) => {
-    // Log the error
-    logger.error(`Error fetching sports: ${error.message}`);
-  });
+        // Iterate through the sports data
+        sports.data.forEach((sport) => {
+          // Log the sport data
+          logger.info(`Sport: ${JSON.stringify(sport)}`);
+        });
+        return sports;
+      } else {
+        // Log an error if sports data is undefined
+        logger.error("sports.data is undefined or null");
+      }
+    })
+    .catch((error) => {
+      // Log the error
+      logger.error(`Error fetching sports: ${error.message}`);
+    });
+}
