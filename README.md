@@ -40,15 +40,14 @@ Aspects of the data farming process are isolated across a series off **NPM Tasks
 # Execute Task
 npm run <TASK>
 
-# Execute ETL workflow.
-npm run odds-etl
+# Query Events Data
+npm run odds-events
 ```
 
 | Task                | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
 | **lint**            | Lint the codebase with _ESLint_ and _Prettier_.               |
 | **odds-account**    | View _API Usage_ statistics.                                  |
-| **odds-etl**        | Execute entire _Extract, Transform, and Load (ETL)_ workflow. |
 | **odds-events**     | Query _events_ data.                                          |
 | **odds-sports**     | Query _sports_ data.                                          |
 | **odds-event-odds** | Query _event odds_ data.                                      |
