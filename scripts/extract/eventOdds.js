@@ -39,7 +39,6 @@ export async function fetchEventsWithDelay(sportKey) {
 
       // Check if the events data is not undefined
       if (events.data) {
-
         // Iterate through the events data
         events.data.forEach((event) => {
           // Log the event data
@@ -136,26 +135,29 @@ sports.data.forEach(async (sport) => {
     logger.info(
       `Fetching odds data for event ( ${event.eventId} ) in sport ( ${event.sportKey} )`,
     );
-    fetchOddsWithDelay(event.sportKey, event.eventId).then((odds) => {
-      // Check if the odds data is not undefined  
-      if (odds.data) {
-        logger.error(`Odds data: ${JSON.stringify(odds.data)}`);
+    fetchOddsWithDelay(event.sportKey, event.eventId)
+      .then((odds) => {
+        // Check if the odds data is not undefined
+        if (odds.data) {
+          logger.error(`Odds data: ${JSON.stringify(odds.data)}`);
 
-        // Write the events object to a JSON file
-        fs.writeFileSync(
-          `data/event_${event.eventId}.json`,
-          JSON.stringify(odds.data, null, 2),
-          "utf-8",
-        );
-        logger.info(`Events data successfully written to data/event_${event.eventId}.json`);
-      } else {
-        // Log an error if odds data is undefined
-        logger.error("odds.data is undefined or null");
-      }
-    }).catch((error) => {
-      // Log the error
-      logger.error(`Error fetching odds: ${error.message}`);
-    });
-    
+          // Write the events object to a JSON file
+          fs.writeFileSync(
+            `data/event_${event.eventId}.json`,
+            JSON.stringify(odds.data, null, 2),
+            "utf-8",
+          );
+          logger.info(
+            `Events data successfully written to data/event_${event.eventId}.json`,
+          );
+        } else {
+          // Log an error if odds data is undefined
+          logger.error("odds.data is undefined or null");
+        }
+      })
+      .catch((error) => {
+        // Log the error
+        logger.error(`Error fetching odds: ${error.message}`);
+      });
   });
 });
