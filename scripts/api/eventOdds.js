@@ -3,6 +3,22 @@
  */
 import "dotenv/config";
 import axios from "axios";
+import winston from "winston";
+
+// Configure Winston logger
+const logger = winston.createLogger({
+  level: "info", // Log level (e.g., 'error', 'warn', 'info', 'http', 'verbose', 'debug', 'silly')
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.printf(({ timestamp, level, message }) => {
+      return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+    }),
+  ),
+  transports: [
+    new winston.transports.Console(), // Log to the console
+    new winston.transports.File({ filename: "api_event_odds.log" }), // Log to a file
+  ],
+});
 
 /**
  * Query odds data.
@@ -45,11 +61,12 @@ export function getEventOdds(sportKey, eventId) {
       },
     )
     .then((response) => {
+      logger.info(`Odds data for event ${eventId} retrieved successfully.`);
       return response;
     })
     .catch((error) => {
-      console.log("Error status", error.response.status);
-      console.log(error.response.data);
+      logger.error(`Error status: ${error.response.status}`);
+      logger.error(error.response.data);
     });
 
   return eventOdds;

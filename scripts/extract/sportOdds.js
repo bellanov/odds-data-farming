@@ -42,7 +42,7 @@ await Sports.getSportsOdds(sportKey)
       logger.info(`Sport: ${JSON.stringify(sport.data)}`);
     } else {
       // Log an error if events data is undefined
-      console.error("sport.data is undefined or null");
+      logger.error("sport.data is undefined or null");
     }
   })
   .catch((error) => {

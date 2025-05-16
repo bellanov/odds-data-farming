@@ -139,7 +139,7 @@ sports.data.forEach(async (sport) => {
       .then((odds) => {
         // Check if the odds data is not undefined
         if (odds.data) {
-          logger.error(`Odds data: ${JSON.stringify(odds.data)}`);
+          logger.info(`Odds data: ${JSON.stringify(odds.data)}`);
 
           // Write the events object to a JSON file
           fs.writeFileSync(
