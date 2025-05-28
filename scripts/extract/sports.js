@@ -6,6 +6,7 @@
 import * as Sports from "../../scripts/api/sports.js";
 import winston from "winston";
 import fs from "fs";
+import { get } from "http";
 
 // Configure Winston logger
 const logger = winston.createLogger({
@@ -28,13 +29,14 @@ export async function getSports() {
     .then((sports) => {
       // Check if the sports data is not undefined
       if (sports.data) {
+
         // Write the sports data to a JSON file
         fs.writeFileSync(
           "data/sports.json",
           JSON.stringify(sports.data, null, 2),
           "utf-8",
         );
-        logger.info("Sports data successfully written to odds_sports.json");
+        logger.info("Sports data successfully written to data/sports.json");
 
         // Iterate through the sports data
         sports.data.forEach((sport) => {
@@ -52,3 +54,6 @@ export async function getSports() {
       logger.error(`Error fetching sports: ${error.message}`);
     });
 }
+
+// Execute the function to get sports data
+getSports();
