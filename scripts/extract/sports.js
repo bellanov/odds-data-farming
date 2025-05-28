@@ -29,7 +29,6 @@ export async function getSports() {
     .then((sports) => {
       // Check if the sports data is not undefined
       if (sports.data) {
-
         // Write the sports data to a JSON file
         fs.writeFileSync(
           "data/sports.json",
