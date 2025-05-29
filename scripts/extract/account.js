@@ -3,7 +3,8 @@
  * @description This script queries account data from The Odds API and logs the results.
  * It retrieves account data from sports and logs the account information.
  */
-import * as Sports from "../../scripts/api/sports.js";
+import * as Firestore from "../load/firestore.js";
+import * as Sports from "../api/sports.js";
 import winston from "winston";
 import fs from "fs";
 
@@ -25,6 +26,10 @@ const logger = winston.createLogger({
 // Query Sports
 await Sports.getSports()
   .then((sports) => {
+    // Define the collection and document
+    const collection = "account"; // Collection name
+    const document = "requests"; // Document name
+
     // Check your usage
     logger.info(
       `Remaining Requests : ${sports.headers["x-requests-remaining"]}`,
@@ -36,6 +41,15 @@ await Sports.getSports()
       remaining: sports.headers["x-requests-remaining"],
       used: sports.headers["x-requests-used"],
     };
+
+    // Add the sport data to Firestore
+    Firestore.addDocument(collection, document, requests)
+      .then(() => {
+        logger.info(`Account information successfully updated.`);
+      })
+      .catch((error) => {
+        logger.error(`Error updating account information: ${error.message}`);
+      });
 
     // Write the account information to a JSON file
     fs.writeFileSync(

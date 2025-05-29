@@ -1,10 +1,8 @@
 /**
- * @fileoverview Load data into Firestore.
+ * @fileoverview Firestore Database Definition.
  */
-import "dotenv/config";
 import * as Firebase from "../../config/firebase.js";
 import { doc, setDoc, getFirestore } from "firebase/firestore";
-import axios from "axios";
 import winston from "winston";
 
 // Configure Winston logger
@@ -23,31 +21,28 @@ const logger = winston.createLogger({
 });
 
 /**
- * Add asdfasdfasdf asdfadf.
- * @param sportKey Identifier of sport to query.
+ * Add a document to a collection in Firestore.
+ * @param collection Name the Collection to add document.
+ * @param document Name of the Document to add to the collection.
+ * @param data Data contained within a document.
  */
-export async function addDocument() {
+export async function addDocument(collection, document, data) {
   // Initialize Cloud Firestore and get a reference to the service
   const db = getFirestore(Firebase.app);
 
-  // Log the start of the document addition process
-  logger.info("Adding documents to Firestore...");
+  // Log the parameters being used
+  logger.info(
+    `Adding document to collection: ${collection}, document: ${document}, data: ${JSON.stringify(data)}`,
+  );
 
-  // Add a new document in collection "cities"
-  await setDoc(doc(db, "cities", "LA"), {
-    name: "Los Angeles",
-    state: "CA",
-    country: "USA",
-  })
+  // Add a new document in collection
+  await setDoc(doc(db, collection, document), data)
     .then(() => {
       // Log success message
-      logger.info("Document successfully written!");
+      logger.info(`Document ${document} successfully written!`);
     })
     .catch((error) => {
       // Log error message
       logger.error("Error writing document: ", error);
     });
 }
-
-// Call the function to add the document
-addDocument();

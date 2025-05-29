@@ -3,8 +3,9 @@
  * @description This script queries events data from The Odds API and logs the results.
  * It retrieves sports data, iterates through each sport, and fetches events data for each sport.
  */
-import * as Events from "../../scripts/api/events.js";
-import * as Sports from "../../scripts/api/sports.js";
+import * as Events from "../api/events.js";
+import * as Firestore from "../load/firestore.js";
+import * as Sports from "../api/sports.js";
 import winston from "winston";
 import fs from "fs";
 
@@ -54,6 +55,22 @@ export async function fetchEventsWithDelay(sportKey) {
           logger.info(`Away Team  : ${JSON.stringify(event.away_team)}`);
           logger.info(`Event Date : ${JSON.stringify(event.commence_time)}`);
           logger.info(`-------------------------------------`);
+
+          // Define the collection and document
+          const collection = "events"; // Collection name
+          const document = event.id; // Document name
+          const data = event;
+
+          // Add the sport data to Firestore
+          Firestore.addDocument(collection, document, data)
+            .then(() => {
+              logger.info(`Sport ${event.id} successfully added to Firestore.`);
+            })
+            .catch((error) => {
+              logger.error(
+                `Error adding sport ${event.id} to Firestore: ${error.message}`,
+              );
+            });
         });
       } else {
         // Log an error if events data is undefined

@@ -3,10 +3,12 @@
  * @description This script queries sports data from The Odds API and logs the results.
  * It retrieves sports data and logs the sport information.
  */
-import * as Sports from "../../scripts/api/sports.js";
+import * as Firestore from "../load/firestore.js";
+import * as Sports from "../api/sports.js";
 import winston from "winston";
 import fs from "fs";
-import { get } from "http";
+// TODO: Uncomment the following line when you need to use deep strict equality check
+// import { isDeepStrictEqual } from "node:util";
 
 // Configure Winston logger
 const logger = winston.createLogger({
@@ -41,6 +43,29 @@ export async function getSports() {
         sports.data.forEach((sport) => {
           // Log the sport data
           logger.info(`Sport: ${JSON.stringify(sport)}`);
+
+          // Define the collection and document
+          const collection = "sports"; // Collection name
+          const document = sport.key; // Document name
+          const data = {
+            key: sport.key,
+            title: sport.title,
+            description: sport.description,
+            active: sport.active,
+          };
+
+          // Add the sport data to Firestore
+          Firestore.addDocument(collection, document, data)
+            .then(() => {
+              logger.info(
+                `Sport ${sport.title} successfully added to Firestore.`,
+              );
+            })
+            .catch((error) => {
+              logger.error(
+                `Error adding sport ${sport.title} to Firestore: ${error.message}`,
+              );
+            });
         });
         return sports;
       } else {
