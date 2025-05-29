@@ -3,6 +3,7 @@
  * @description This script queries event odds data from The Odds API and logs the results.
  * It retrieves event odds data for a specific sport and event, and logs the event information.
  */
+import "dotenv/config";
 import * as Events from "../api/events.js";
 import * as EventOdds from "../api/eventOdds.js";
 import * as Firestore from "../load/firestore.js";
@@ -78,8 +79,11 @@ export async function fetchOddsWithDelay(sportKey, eventId) {
   // Delay to avoid rate limiting
   await delay((rateLimit += 500)); // Increase delay for each request
 
+  // eslint-disable-next-line no-undef
+  const oddsFormat = process.env.ODDS_FORMAT; // Format of the odds (e.g., 'decimal', 'american')
+
   // Query Odds
-  const eventOdds = EventOdds.getEventOdds(sportKey, eventId)
+  const eventOdds = EventOdds.getEventOdds(sportKey, eventId, oddsFormat)
     .then((odds) => {
       // Check if the odds data is not undefined
       if (odds.data) {
@@ -145,8 +149,9 @@ sports.data.forEach(async (sport) => {
           // Define the subcollection and document
           const parentCollection = "events"; // Parent collection name
           const parentDoc = event.eventId; // Parent document ID
-          const subcollection = "decimal"; // Subcollection name
-          const subDoc = event.eventId; // Subcollection document ID
+          // eslint-disable-next-line no-undef
+          const subcollection = process.env.ODDS_FORMAT; // Subcollection name
+          const subDoc = Date.now().toString(); // Subcollection document ID
 
           // Publish the sport data to Firestore
           Firestore.addToSubcollection(
@@ -163,7 +168,7 @@ sports.data.forEach(async (sport) => {
             })
             .catch((error) => {
               logger.error(
-                `Error adding sport ${event.eventId} to Firestore: ${error.message}`,
+                `Error adding odds for ${event.eventId} to Firestore: ${error.message}`,
               );
             });
 

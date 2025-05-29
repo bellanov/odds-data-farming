@@ -24,7 +24,7 @@ const logger = winston.createLogger({
  * Query odds data.
  * @param sportKey Identifier of sport to query.
  */
-export function getEventOdds(sportKey, eventId) {
+export function getEventOdds(sportKey, eventId, oddsFormat) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
   const apiKey = process.env.THE_ODDS_API;
@@ -40,9 +40,6 @@ export function getEventOdds(sportKey, eventId) {
 
   // h2h | spreads | totals. Multiple can be specified if comma delimited
   const markets = "h2h";
-
-  // decimal | american
-  const oddsFormat = "decimal";
 
   // iso | unix
   const dateFormat = "iso";
