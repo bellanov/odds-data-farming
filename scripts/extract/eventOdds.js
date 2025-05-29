@@ -3,9 +3,10 @@
  * @description This script queries event odds data from The Odds API and logs the results.
  * It retrieves event odds data for a specific sport and event, and logs the event information.
  */
-import * as Events from "../../scripts/api/events.js";
-import * as EventOdds from "../../scripts/api/eventOdds.js";
-import * as Sports from "../../scripts/api/sports.js";
+import * as Events from "../api/events.js";
+import * as EventOdds from "../api/eventOdds.js";
+import * as Firestore from "../load/firestore.js";
+import * as Sports from "../api/sports.js";
 import winston from "winston";
 import fs from "fs";
 
@@ -140,6 +141,31 @@ sports.data.forEach(async (sport) => {
         // Check if the odds data is not undefined
         if (odds.data) {
           logger.info(`Odds data: ${JSON.stringify(odds.data)}`);
+
+          // Define the subcollection and document
+          const parentCollection = "events"; // Parent collection name
+          const parentDoc = event.eventId; // Parent document ID
+          const subcollection = "decimal"; // Subcollection name
+          const subDoc = event.eventId; // Subcollection document ID
+
+          // Publish the sport data to Firestore
+          Firestore.addToSubcollection(
+            parentCollection,
+            parentDoc,
+            subcollection,
+            subDoc,
+            odds.data,
+          )
+            .then(() => {
+              logger.info(
+                `Odds for ${event.eventId} successfully added to Firestore.`,
+              );
+            })
+            .catch((error) => {
+              logger.error(
+                `Error adding sport ${event.eventId} to Firestore: ${error.message}`,
+              );
+            });
 
           // Write the events object to a JSON file
           fs.writeFileSync(

@@ -3,7 +3,7 @@
  * @description This script queries event odds data from The Odds API and logs the results.
  * It retrieves event odds data for a specific sport and event, and logs the event information.
  */
-import * as Sports from "../../scripts/api/sportsOdds.js";
+import * as Sports from "../api/sportsOdds.js";
 import winston from "winston";
 import fs from "fs";
 
