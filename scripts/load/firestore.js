@@ -46,3 +46,41 @@ export async function addDocument(collection, document, data) {
       logger.error("Error writing document: ", error);
     });
 }
+
+/**
+ * Add a document to a subcollection in Firestore.
+ * @param {string} parentCollection - Name of the parent collection.
+ * @param {string} parentDoc - ID of the parent document.
+ * @param {string} subcollection - Name of the subcollection.
+ * @param {string} subDoc - ID of the subcollection document.
+ * @param {object} data - Data to write.
+ */
+export async function addToSubcollection(
+  parentCollection,
+  parentDoc,
+  subcollection,
+  subDoc,
+  data,
+) {
+  // Initialize Cloud Firestore and get a reference to the service
+  const db = getFirestore(Firebase.app);
+
+  // Log the parameters being used
+  logger.info(
+    `Adding document to subcollection: ${parentCollection}/${parentDoc}/${subcollection}/${subDoc}, data: ${JSON.stringify(data)}`,
+  );
+
+  // Add a new document in collection
+  await setDoc(
+    doc(db, parentCollection, parentDoc, subcollection, subDoc),
+    data,
+  )
+    .then(() => {
+      // Log success message
+      logger.info(`Document ${subDoc} successfully written to subcollection!`);
+    })
+    .catch((error) => {
+      // Log error message
+      logger.error("Error writing document to subcollection: ", error);
+    });
+}
