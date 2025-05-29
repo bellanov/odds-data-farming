@@ -64,7 +64,7 @@ export async function fetchEventsWithDelay(sportKey) {
           // Add the sport data to Firestore
           Firestore.addDocument(collection, document, data)
             .then(() => {
-              logger.info(`Sport ${event.id} successfully added to Firestore.`);
+              logger.info(`Event ${event.id} successfully added to Firestore.`);
             })
             .catch((error) => {
               logger.error(
