@@ -2,7 +2,7 @@
 
 This project is responsible for **farming** data from _The Odds API_.
 
-![Odds Data Scraping Diagram](./diagrams/odds.png "Odds Data Scraping Diagram")
+![Odds Data Scraping Diagram](./diagrams/odds.svg "Odds Data Scraping Diagram")
 
 ## Dependencies
 
