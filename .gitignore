@@ -177,8 +177,8 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node,macos
 
 # Diagrams
-/diagrams/*.svg.bkp
-/diagrams/*.svg.dtmp
+/diagrams/*.png.bkp
+/diagrams/*.png.dtmp
 
 # Data files
 odds_*.json
