@@ -5,13 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf data; mkdir data; rm -rf *.log;",
     "format": "npx prettier . --write",
     "lint": "npx eslint ; scripts/cicd/lint.sh; npx prettier . --check",
-    "odds-account": "rm -rf data/account.json account.log; scripts/bin/account.sh",
-    "odds-events": "rm -rf data/events.json events.log; scripts/bin/events.sh",
-    "odds-sports": "rm -rf data/sports.json sports.log; scripts/bin/sports.sh",
-    "odds-event-odds": "rm -rf data/event_* event_odds.log; scripts/bin/eventOdds.sh",
-    "odds-sport-odds": "rm -rf data/sport_odds.json sport_odds.log; scripts/bin/sportOdds.sh",
+    "odds-account": "npm run clean; scripts/bin/account.sh",
+    "odds-events": "npm run clean; scripts/bin/events.sh",
+    "odds-sports": "npm run clean; scripts/bin/sports.sh",
+    "odds-event-odds": "npm run clean; scripts/bin/eventOdds.sh",
+    "odds-sport-odds": "npm run clean; scripts/bin/sportOdds.sh",
     "test": "jasmine"
   },
   "repository": {

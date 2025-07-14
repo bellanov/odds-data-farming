@@ -22,13 +22,6 @@ THE_ODDS_API="<API_TOKEN>"
 # TBA
 ```
 
-Also, create a directory to hold output from executing scripts.
-
-```sh
-# Create Data Directory
-mkdir data
-```
-
 ## Scripts
 
 The scripts are organized across a series of directories.
