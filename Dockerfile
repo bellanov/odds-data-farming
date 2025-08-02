@@ -6,9 +6,6 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Create data directory
-RUN mkdir data
-
 # Install dependencies
 RUN npm ci --only="production" && \
     npm cache clean --force

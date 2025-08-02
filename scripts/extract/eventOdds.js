@@ -80,7 +80,7 @@ export async function fetchOddsWithDelay(sportKey, eventId) {
   await delay((rateLimit += 500)); // Increase delay for each request
 
   // eslint-disable-next-line no-undef
-  const oddsFormat = process.env.ODDS_FORMAT; // Format of the odds (e.g., 'decimal', 'american')
+  const oddsFormat = process.env.ODDS_FORMAT.replace(/"/g, ""); // Format of the odds (e.g., 'decimal', 'american')
 
   // Query Odds
   const eventOdds = EventOdds.getEventOdds(sportKey, eventId, oddsFormat)
@@ -161,7 +161,7 @@ sports.data.forEach(async (sport) => {
           const parentCollection = "events"; // Parent collection name
           const parentDoc = event.eventId; // Parent document ID
           // eslint-disable-next-line no-undef
-          const subcollection = process.env.ODDS_FORMAT; // Subcollection name
+          const subcollection = process.env.ODDS_FORMAT.replace(/"/g, ""); // Subcollection name
           const subDoc = Date.now().toString(); // Subcollection document ID
 
           // Publish the sport data to Firestore
