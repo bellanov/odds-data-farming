@@ -27,7 +27,7 @@ const logger = winston.createLogger({
 export function getEventOdds(sportKey, eventId, oddsFormat) {
   // Retrieve API Key for authentication
   // eslint-disable-next-line no-undef
-  const apiKey = process.env.THE_ODDS_API;
+  const apiKey = process.env.THE_ODDS_API.replace(/"/g, ""); // Remove quotes if present
 
   if (!apiKey) {
     throw new Error(

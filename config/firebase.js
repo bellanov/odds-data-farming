@@ -13,13 +13,13 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   // eslint-disable-next-line no-undef
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: process.env.FIREBASE_API_KEY.replace(/"/g, ""), // Remove quotes if present
   // eslint-disable-next-line no-undef
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN.replace(/"/g, ""), // Remove quotes if present
   // eslint-disable-next-line no-undef
-  projectId: process.env.FIREBASE_PROJECT_ID,
+  projectId: process.env.FIREBASE_PROJECT_ID.replace(/"/g, ""), // Remove quotes if present
   // eslint-disable-next-line no-undef
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET.replace(/"/g, ""), // Remove quotes if present
   // eslint-disable-next-line no-undef
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   // eslint-disable-next-line no-undef
