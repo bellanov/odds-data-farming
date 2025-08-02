@@ -1,0 +1,17 @@
+# This file is used to specify which files and directories should be ignored by Docker.
+# It is similar to .gitignore but for Docker builds.
+
+# Node modules and logs
+node_modules/
+
+# Logs
+*.log
+
+# Data directories
+data/
+
+# GitHub Actions
+.github/
+
+# Diagrams
+diagrams/
