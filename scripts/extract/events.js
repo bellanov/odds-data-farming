@@ -112,6 +112,16 @@ sports.data.forEach(async (sport) => {
   // Identify sports to query
   const sportKey = sport.key;
 
+  // Check if the sport key is amongst the sports to query
+  // eslint-disable-next-line no-undef
+  const sportsToQuery = process.env.SPORTS;
+  logger.info(`Sports to query: ${sportsToQuery}`);
+
+  if (!sportsToQuery.includes(sportKey)) {
+    logger.info(`Skipping sport: ${sportKey}`);
+    return; // Skip this sport if it's not in the list
+  }
+
   // Fetch the events data for the sport
   logger.info(`Fetching events for sport: ${sportKey}`);
   fetchEventsWithDelay(sportKey);
