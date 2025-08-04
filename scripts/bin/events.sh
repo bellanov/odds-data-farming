@@ -13,7 +13,7 @@
 #   Writes log message to stderr
 #######################################
 err() {
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*" >&2
+  echo "$(date +'%Y-%m-%dT%H:%M:%S%z') [ERROR]: $*" >&2
   exit 1
 }
 
@@ -27,7 +27,7 @@ err() {
 #   Writes log message to stdout
 #######################################
 info() {
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*"
+  echo "$(date +'%Y-%m-%dT%H:%M:%S%z') [INFO]: $*"
 }
 
 # Begin script execution
