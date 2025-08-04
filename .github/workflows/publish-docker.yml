@@ -1,3 +1,5 @@
+# This workflow builds and publishes a Docker image to Docker Hub
+# when changes are pushed to the main branch.
 name: Publish Docker Image
 
 on:

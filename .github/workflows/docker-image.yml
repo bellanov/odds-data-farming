@@ -1,3 +1,5 @@
+# This workflow builds a Docker image for the odds-data-farming project
+# and runs it on pull requests to the main branch.
 name: Docker Image CI
 
 on:
