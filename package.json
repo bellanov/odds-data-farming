@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf data; mkdir data; rm -rf *.log;",
-    "docker": "npm run docker-teardown ; npm run docker-build ; npm run docker-deploy;",
+    "docker": "npm run docker-teardown; npm run docker-build; npm run docker-deploy;",
     "docker-build": "scripts/cicd/build.sh",
     "docker-deploy": "scripts/cicd/deploy.sh",
     "docker-teardown": "scripts/cicd/teardown.sh",
