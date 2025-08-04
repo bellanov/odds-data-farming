@@ -1,0 +1,15 @@
+# The API path for the Pod resource
+apiVersion: v1
+# The kind of resource (Pod)
+kind: Pod
+metadata:
+  # Name of the Pod
+  name: americanfootball-ncaaf
+spec:
+  # List of containers in the Pod
+  containers:
+    # Container image (using a tag to specify version)
+    - image: bellanov/odds-data-farming
+      name: americanfootball-ncaaf-american
+    - image: bellanov/odds-data-farming
+      name: americanfootball-ncaaf-decimal
