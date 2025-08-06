@@ -34,7 +34,7 @@ spec:
           containers:
             - name: americanfootball-ncaaf-decimal
               image: alpine
-              command: ["date"]
+              command: ["env"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
@@ -55,7 +55,7 @@ spec:
           containers:
             - name: americanfootball-nfl-american
               image: alpine
-              command: ["date"]
+              command: ["env"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
@@ -76,7 +76,7 @@ spec:
           containers:
             - name: americanfootball-nfl-decimal
               image: alpine
-              command: ["date"]
+              command: ["env"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
