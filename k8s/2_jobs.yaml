@@ -13,10 +13,11 @@ spec:
           containers:
             - name: americanfootball-ncaaf-american
               image: alpine
+              command: ["env"]
               envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
                     name: odds-data-poc
-              command: ["env"]
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -34,6 +35,10 @@ spec:
             - name: americanfootball-ncaaf-decimal
               image: alpine
               command: ["date"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: odds-data-poc
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -51,6 +56,10 @@ spec:
             - name: americanfootball-nfl-american
               image: alpine
               command: ["date"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: odds-data-poc
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -68,4 +77,8 @@ spec:
             - name: americanfootball-nfl-decimal
               image: alpine
               command: ["date"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: odds-data-poc
           restartPolicy: Never
