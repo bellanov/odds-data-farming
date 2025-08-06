@@ -11,9 +11,12 @@ spec:
       template:
         spec:
           containers:
-            - name: americanfootball-ncaaf-decimal
+            - name: americanfootball-ncaaf-american
               image: alpine
-              command: ["date"]
+              envFrom:
+                - configMapRef:
+                    name: odds-data-poc
+              command: ["env"]
           restartPolicy: Never
 ---
 apiVersion: batch/v1

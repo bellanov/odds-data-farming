@@ -1,5 +1,8 @@
 #!/bin/bash
 #
-# Build Docker containers after code changes.
+# Create ConfigMap for odds data environments.
 
-kubectl create configmap my-env-file --from-file=.env
+# odds-data-poc
+# ConfigMaps need to be present in the namespace where the jobs are executed.
+kubectl create configmap odds-data-poc --from-file=.env -n americanfootball-ncaaf
+kubectl create configmap odds-data-poc --from-file=.env -n americanfootball-nfl
