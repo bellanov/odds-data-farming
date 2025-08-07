@@ -15,6 +15,7 @@
     "k8s-config": "scripts/k8s/config_maps.sh",
     "k8s-create-cluster": "scripts/minikube/create_cluster.sh",
     "k8s-delete-cluster": "scripts/minikube/delete_cluster.sh",
+    "k8s-enable-addons": "scripts/minikube/enable_addons.sh",
     "k8s-delete": "kubectl delete -f k8s/",
     "k8s-list": "minikube profile list; kubectl get namespaces; kubectl get pods --all-namespaces",
     "k8s-metrics": "minikube addons enable metrics-server",
