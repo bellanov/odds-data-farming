@@ -20,21 +20,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract tag name
-        if: startsWith(github.ref, 'refs/tags/')
-        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
       - name: Build Docker image
         run: |
-          docker build -t bellanov/odds-data-farming:${{ github.sha }} .
-          docker tag bellanov/odds-data-farming:${{ github.sha }} bellanov/odds-data-farming:latest
+          docker build -t bellanov/odds-data-farming:${{ env.TAG_NAME }} .
+          docker tag bellanov/odds-data-farming:${{ env.TAG_NAME }} bellanov/odds-data-farming:latest
 
       - name: Push Docker image
         run: |
-          docker push bellanov/odds-data-farming:${{ github.sha }}
+          docker push bellanov/odds-data-farming:${{ env.TAG_NAME }}
           docker push bellanov/odds-data-farming:latest
 
-      - name: Display Tag Name
-        run: |
-          echo "Tag name from github.ref_name: ${{ github.ref_name }}"
-          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
