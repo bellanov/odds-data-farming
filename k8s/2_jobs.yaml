@@ -5,15 +5,15 @@ metadata:
   name: americanfootball-ncaaf-american
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "*/2 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-ncaaf-american
-              image: alpine
-              command: ["env"]
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-account"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
@@ -26,15 +26,15 @@ metadata:
   name: americanfootball-ncaaf-decimal
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "*/2 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-ncaaf-decimal
-              image: alpine
-              command: ["env"]
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-account"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
@@ -47,15 +47,15 @@ metadata:
   name: americanfootball-nfl-american
   namespace: americanfootball-nfl
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "*/2 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-american
-              image: alpine
-              command: ["env"]
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-account"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
@@ -68,15 +68,15 @@ metadata:
   name: americanfootball-nfl-decimal
   namespace: americanfootball-nfl
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "*/2 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-decimal
-              image: alpine
-              command: ["env"]
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-account"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
