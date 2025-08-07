@@ -22,10 +22,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t bellanov/odds-data-farming:${{ github.sha }} .
-          docker tag bellanov/odds-data-farming:${{ github.sha }} bellanov/odds-data-farming:latest
+          docker build -t bellanov/odds-data-farming:$(date +%s) .
+          docker tag bellanov/odds-data-farming:$(date +%s) bellanov/odds-data-farming:latest
 
       - name: Push Docker image
         run: |
-          docker push bellanov/odds-data-farming:${{ github.sha }}
+          docker push bellanov/odds-data-farming:$(date +%s)
           docker push bellanov/odds-data-farming:latest
