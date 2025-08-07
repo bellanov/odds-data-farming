@@ -29,4 +29,3 @@ jobs:
         run: |
           docker push bellanov/odds-data-farming:${{ env.TAG_NAME }}
           docker push bellanov/odds-data-farming:latest
-
