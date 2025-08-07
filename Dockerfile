@@ -13,5 +13,5 @@ RUN npm ci --only="production" && \
 # Copy application source code
 COPY . .
 
-# Execute the specified task
-ENTRYPOINT [ "scripts/cicd/entrypoint.sh" ]
+# Execute a Task
+CMD [ "npm", "run", "odds-account" ]
