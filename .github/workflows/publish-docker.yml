@@ -29,4 +29,3 @@ jobs:
         run: |
           docker push bellanov/odds-data-farming:${{ github.sha }}
           docker push bellanov/odds-data-farming:latest
-          
