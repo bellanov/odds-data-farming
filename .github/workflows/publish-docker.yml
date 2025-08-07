@@ -22,11 +22,15 @@ jobs:
 
       - name: Build Docker image
         run: |
-          VERSION=$(date +%s)
-          docker build -t bellanov/odds-data-farming:$VERSION .
-          docker tag bellanov/odds-data-farming:$VERSION bellanov/odds-data-farming:latest
+          docker build -t bellanov/odds-data-farming:${{ github.sha }} .
+          docker tag bellanov/odds-data-farming:${{ github.sha }} bellanov/odds-data-farming:latest
 
       - name: Push Docker image
         run: |
-          docker push bellanov/odds-data-farming:$VERSION
+          docker push bellanov/odds-data-farming:${{ github.sha }}
           docker push bellanov/odds-data-farming:latest
+
+      - name: Display Tag Name
+        run: |
+          echo "Tag name from github.ref_name: ${{ github.ref_name }}"
+          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
