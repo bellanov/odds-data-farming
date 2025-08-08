@@ -17,7 +17,7 @@ spec:
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
-                    name: odds-data-poc
+                    name: americanfootball-ncaaf-american
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -38,7 +38,7 @@ spec:
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
-                    name: odds-data-poc
+                    name: americanfootball-ncaaf-decimal
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -59,7 +59,7 @@ spec:
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
-                    name: odds-data-poc
+                    name: americanfootball-nfl-american
           restartPolicy: Never
 ---
 apiVersion: batch/v1
@@ -80,5 +80,5 @@ spec:
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
-                    name: odds-data-poc
+                    name: americanfootball-nfl-decimal
           restartPolicy: Never

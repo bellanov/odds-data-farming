@@ -14,4 +14,4 @@ RUN npm ci --only="production" && \
 COPY . .
 
 # Execute a Task
-CMD [ "npm", "run", "odds-account" ]
+CMD [ "npm", "run", "odds-event-odds" ]
