@@ -58,6 +58,7 @@ npm run odds-events
 | **k8s-apply**          | Applys existing _k8s/_ manifests, **procuring** resources.                  |
 | **k8s-config**         | Procures _ConfigMaps_ required by K8s resources.                            |
 | **k8s-create-cluster** | Creates a _Kubernetes_ cluster to deploy **containerized** workloads.       |
+| **k8s-cron-jobs**      | Views _Scheduled Task_ information.                                         |
 | **k8s-delete-cluster** | Deletes a _Kubernetes_ cluster.                                             |
 | **k8s-delete**         | Deletes existing _k8s/_ manifests, **deleteing** resources.                 |
 | **k8s-list**           | Lists existing _k8s_ cluster **information** (namespaces, resources, etc.). |
