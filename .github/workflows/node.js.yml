@@ -30,6 +30,8 @@ jobs:
         run: |
           touch .env
           echo THE_ODDS_API=${{ secrets.THE_ODDS_API }} >> .env
+          echo MARKETS="h2h,spreads,totals" >> .env
+          # echo MARKETS=${{ vars.MARKETS }} >> .env
       - run: npm ci
       - run: npm run lint
       - run: npm run build --if-present
