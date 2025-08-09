@@ -39,7 +39,7 @@ export function getEventOdds(sportKey, eventId, oddsFormat) {
   const regions = "us";
 
   // h2h | spreads | totals. Multiple can be specified if comma delimited
-  const markets = "h2h";
+  const markets = process.env.MARKETS.replace(/"/g, ""); // Remove quotes if present
 
   // iso | unix
   const dateFormat = "iso";
