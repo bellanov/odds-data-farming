@@ -1,0 +1,43 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: americanfootball-ncaaf-american
+  namespace: americanfootball-ncaaf
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: americanfootball-ncaaf-american
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-event-odds"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: americanfootball-ncaaf-american
+          restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: americanfootball-ncaaf-decimal
+  namespace: americanfootball-ncaaf
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: americanfootball-ncaaf-decimal
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-event-odds"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: americanfootball-ncaaf-decimal
+          restartPolicy: Never
+---
+

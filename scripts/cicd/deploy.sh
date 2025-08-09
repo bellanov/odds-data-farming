@@ -5,7 +5,7 @@
 # Deploy Container
 docker run \
   --name odds-data-farming \
-  --env-file ./.env \
+  --env-file ./k8s/config/.env.nfl.american \
   --cpus="1.5" \
   --memory="512m" \
   odds-data-farming:latest
