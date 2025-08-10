@@ -4,7 +4,7 @@ metadata:
   name: americanfootball-ncaaf-american
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "*/5 * * * *"
+  schedule: "58 * * * *"
   jobTemplate:
     spec:
       template:
@@ -25,7 +25,7 @@ metadata:
   name: americanfootball-ncaaf-decimal
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "*/5 * * * *"
+  schedule: "58 * * * *"
   jobTemplate:
     spec:
       template:
@@ -38,6 +38,48 @@ spec:
                 # The ConfigMap needs to exist in the namespace before this job runs.
                 - configMapRef:
                     name: americanfootball-ncaaf-decimal
+          restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: americanfootball-ncaaf-props-american
+  namespace: americanfootball-ncaaf
+spec:
+  schedule: "11 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: americanfootball-ncaaf-props-american
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-event-odds"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: americanfootball-ncaaf-props-american
+          restartPolicy: Never
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: americanfootball-ncaaf-props-decimal
+  namespace: americanfootball-ncaaf
+spec:
+  schedule: "14 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: americanfootball-ncaaf-props-decimal
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-event-odds"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: americanfootball-ncaaf-props-decimal
           restartPolicy: Never
 ---
 
