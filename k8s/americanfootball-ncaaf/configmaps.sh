@@ -11,5 +11,5 @@ kubectl create configmap americanfootball-ncaaf-american --from-env-file=k8s/con
 kubectl create configmap americanfootball-ncaaf-decimal --from-env-file=k8s/config/.env.ncaaf.decimal -n americanfootball-ncaaf
 
 # Player / Team Properties
-kubectl create configmap americanfootball-ncaaf-props-american --from-env-file=k8s/config/.env.ncaaf.american -n americanfootball-ncaaf
-kubectl create configmap americanfootball-ncaaf-props-decimal --from-env-file=k8s/config/.env.ncaaf.decimal -n americanfootball-ncaaf
+kubectl create configmap americanfootball-ncaaf-props-american --from-env-file=k8s/config/.env.ncaaf.props.american -n americanfootball-ncaaf
+kubectl create configmap americanfootball-ncaaf-props-decimal --from-env-file=k8s/config/.env.ncaaf.props.decimal -n americanfootball-ncaaf
