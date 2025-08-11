@@ -42,6 +42,12 @@ export function getEventOdds(sportKey, eventId, oddsFormat) {
   // eslint-disable-next-line no-undef
   const markets = process.env.MARKETS.replace(/"/g, ""); // Remove quotes if present
 
+  if (!markets) {
+    throw new Error(
+      "Markets are missing. Please set MARKETS in your .env file.",
+    );
+  }
+
   // iso | unix
   const dateFormat = "iso";
 
