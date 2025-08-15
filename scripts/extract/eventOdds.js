@@ -164,7 +164,7 @@ sports.data.forEach(async (sport) => {
           const subcollection = process.env.ODDS_FORMAT.replace(/"/g, ""); // Subcollection name
           const subDoc = Date.now().toString(); // Subcollection document ID
           // Add epoch to the odds data
-          odds.data.epoch = subDoc; 
+          odds.data.epoch = subDoc;
 
           // Publish the sport data to Firestore
           Firestore.addToSubcollection(
