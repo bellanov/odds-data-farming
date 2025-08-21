@@ -42,16 +42,16 @@
   },
   "homepage": "https://github.com/bellanov/odds-data-scraping#readme",
   "dependencies": {
-    "axios": "^1.9.0",
-    "dotenv": "^16.5.0",
-    "firebase": "^11.8.1",
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "firebase": "^12.1.0",
     "winston": "^3.17.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
-    "eslint": "^9.26.0",
-    "globals": "^16.0.0",
-    "jasmine": "^5.7.1",
-    "prettier": "3.5.3"
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
+    "globals": "^16.3.0",
+    "jasmine": "^5.9.0",
+    "prettier": "3.6.2"
   }
 }
