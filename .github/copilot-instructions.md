@@ -65,7 +65,6 @@ The core functionality is organized into ETL (Extract, Transform, Load) operatio
 - Query sports data: `npm run odds-sports` -- extracts available sports from The Odds API
 - Query events data: `npm run odds-events` -- extracts events for configured sports
 - Query event odds: `npm run odds-event-odds` -- extracts odds for specific events
-- Query sport odds: `npm run odds-sport-odds` -- extracts odds for entire sports
 - View API usage: `npm run odds-account` -- checks API quota and usage statistics
 
 ### Script Architecture
