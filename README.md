@@ -67,5 +67,4 @@ npm run odds-events
 | **odds-events**        | Query _events_ data.                                                        |
 | **odds-sports**        | Query _sports_ data.                                                        |
 | **odds-event-odds**    | Query _event odds_ data.                                                    |
-| **odds-sport-odds**    | Query _sport odds_ data.                                                    |
 | **test**               | Execute unit tests powered by _Jasmine_.                                    |
