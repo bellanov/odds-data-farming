@@ -65,7 +65,6 @@ npm run odds-events
 | **lint**               | Lint the codebase with _ESLint_ and _Prettier_.                             |
 | **odds-account**       | View _API Usage_ statistics.                                                |
 | **odds-events**        | Query _events_ data.                                                        |
-| **odds-sports**        | Query _sports_ data.                                                        |
 | **odds-event-odds**    | Query _event odds_ data.                                                    |
 | **odds-sport-odds**    | Query _sport odds_ data.                                                    |
 | **test**               | Execute unit tests powered by _Jasmine_.                                    |

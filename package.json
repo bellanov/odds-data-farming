@@ -26,7 +26,6 @@
     "lint": "npx eslint; scripts/cicd/lint.sh; npx prettier . --check",
     "odds-account": "npm run clean; scripts/bin/account.sh",
     "odds-events": "npm run clean; scripts/bin/events.sh",
-    "odds-sports": "npm run clean; scripts/bin/sports.sh",
     "odds-event-odds": "npm run clean; scripts/bin/eventOdds.sh",
     "odds-sport-odds": "npm run clean; scripts/bin/sportOdds.sh",
     "test": "jasmine"
