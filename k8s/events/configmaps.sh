@@ -7,4 +7,4 @@
 # Create ConfigMaps for Events.
 
 # Map to the odds-events NPM task
-kubectl create configmap odds-events --from-env-file=k8s/config/.env.events -n americanfootball-nfl
+kubectl create configmap odds-events --from-env-file=k8s/config/.env.events -n odds-events
