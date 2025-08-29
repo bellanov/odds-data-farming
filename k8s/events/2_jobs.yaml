@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: odds-events
+  namespace: odds-events
+spec:
+  schedule: "24 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: odds-events
+              image: bellanov/odds-data-farming
+              command: ["npm", "run", "odds-events"]
+              envFrom:
+                # The ConfigMap needs to exist in the namespace before this job runs.
+                - configMapRef:
+                    name: odds-events
+          restartPolicy: Never
+---
+
