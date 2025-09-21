@@ -17,9 +17,6 @@ In order for the scripts to execute successfully, the appropriate _authenticatio
 
 # Sports Data APIs
 THE_ODDS_API="<API_TOKEN>"
-
-# Firebase Configurations
-# TBA
 ```
 
 ## Scripts
