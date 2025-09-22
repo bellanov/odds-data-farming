@@ -4,7 +4,7 @@ metadata:
   name: americanfootball-ncaaf-american
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "30 * * * *"
+  schedule: "30 0,12 * * *"
   jobTemplate:
     spec:
       template:
@@ -25,7 +25,7 @@ metadata:
   name: americanfootball-ncaaf-decimal
   namespace: americanfootball-ncaaf
 spec:
-  schedule: "34 * * * *"
+  schedule: "34 0,12 * * *"
   jobTemplate:
     spec:
       template:
