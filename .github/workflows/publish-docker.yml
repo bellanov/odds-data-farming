@@ -27,9 +27,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t bellanov/odds-data-farming:${{ steps.version.outputs.VERSION }} .
-          docker tag bellanov/odds-data-farming:${{ steps.version.outputs.VERSION }} bellanov/odds-data-farming:latest
 
       - name: Push Docker image
         run: |
           docker push bellanov/odds-data-farming:${{ steps.version.outputs.VERSION }}
-          docker push bellanov/odds-data-farming:latest

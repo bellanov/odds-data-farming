@@ -4,14 +4,14 @@ metadata:
   name: americanfootball-nfl-american
   namespace: americanfootball-nfl
 spec:
-  schedule: "55 * * * *"
+  schedule: "44 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-american
-              image: bellanov/odds-data-farming
+              image: bellanov/odds-data-farming:0.1.0
               command: ["npm", "run", "odds-event-odds"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
@@ -25,14 +25,14 @@ metadata:
   name: americanfootball-nfl-decimal
   namespace: americanfootball-nfl
 spec:
-  schedule: "59 * * * *"
+  schedule: "48 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-decimal
-              image: bellanov/odds-data-farming
+              image: bellanov/odds-data-farming:0.1.0
               command: ["npm", "run", "odds-event-odds"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
@@ -46,14 +46,14 @@ metadata:
   name: americanfootball-nfl-props-american
   namespace: americanfootball-nfl
 spec:
-  schedule: "2 * * * *"
+  schedule: "52 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-props-american
-              image: bellanov/odds-data-farming
+              image: bellanov/odds-data-farming:0.1.0
               command: ["npm", "run", "odds-event-odds"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
@@ -67,14 +67,14 @@ metadata:
   name: americanfootball-nfl-props-decimal
   namespace: americanfootball-nfl
 spec:
-  schedule: "6 * * * *"
+  schedule: "56 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: americanfootball-nfl-props-decimal
-              image: bellanov/odds-data-farming
+              image: bellanov/odds-data-farming:0.1.0
               command: ["npm", "run", "odds-event-odds"]
               envFrom:
                 # The ConfigMap needs to exist in the namespace before this job runs.
