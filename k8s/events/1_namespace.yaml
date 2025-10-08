@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    name: odds-events
-  name: odds-events
+    name: events
+  name: events
 ---
 
