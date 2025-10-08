@@ -97,12 +97,6 @@ All data extraction creates:
 
 ### Application Deployment
 
-- Apply NFL configs: `npm run k8s-apply-nfl-config` -- creates NFL ConfigMaps
-- Deploy NFL jobs: `npm run k8s-apply-nfl` -- deploys NFL data extraction jobs
-- Apply NCAAF configs: `npm run k8s-apply-ncaaf-config` -- creates NCAAF ConfigMaps
-- Deploy NCAAF jobs: `npm run k8s-apply-ncaaf` -- deploys NCAAF data extraction jobs
-- Delete deployments: `npm run k8s-delete-nfl` or `npm run k8s-delete-ncaaf`
-
 REQUIRES: kubectl and minikube installed and available in PATH
 
 ## Testing and Validation
