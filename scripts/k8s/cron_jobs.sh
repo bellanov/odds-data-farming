@@ -4,8 +4,5 @@
 # This script lists the CronJobs in the specified namespaces.
 #
 
-# Create ConfigMaps for NCAAF.
-kubectl describe cronjobs -n americanfootball-ncaaf 
-
-# Create ConfigMaps for NFL.
-kubectl describe cronjobs -n americanfootball-nfl
+# Create ConfigMaps for American Football.
+kubectl describe cronjobs -n football

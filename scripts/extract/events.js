@@ -107,6 +107,10 @@ const sports = await Sports.getSports()
     logger.error(`Error fetching sports: ${error.message}`);
   });
 
+// Display the sports to query
+// eslint-disable-next-line no-undef
+logger.info(`Sports to query: ${process.env.SPORTS}`);
+
 // Iterate through the sports data
 sports.data.forEach(async (sport) => {
   // Identify sports to query
@@ -115,7 +119,6 @@ sports.data.forEach(async (sport) => {
   // Check if the sport key is amongst the sports to query
   // eslint-disable-next-line no-undef
   const sportsToQuery = process.env.SPORTS;
-  logger.info(`Sports to query: ${sportsToQuery}`);
 
   if (!sportsToQuery.includes(sportKey)) {
     logger.info(`Skipping sport: ${sportKey}`);
