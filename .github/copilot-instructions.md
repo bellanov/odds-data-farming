@@ -1,6 +1,6 @@
 # Odds Data Farming
 
-This project is a Node.js ETL system that farms sports betting data from The Odds API and stores it in Firebase. The system supports containerized deployment via Docker and Kubernetes orchestration.
+This project is a Node.js ETL system that farms sports betting data from The Odds API and stores it in Firebase. The system supports containerized deployment via Docker.
 
 Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
 
@@ -71,33 +71,18 @@ The core functionality is organized into ETL (Extract, Transform, Load) operatio
 
 ```
 scripts/
-├── api/           # API query modules (sports.js, events.js, eventOdds.js, sportsOdds.js)
+├── api/           # API query modules (sports.js, events.js, eventOdds.js)
 ├── bin/           # Executable shell scripts that call extract/ modules
 ├── extract/       # Main ETL logic (calls api/ modules, processes data)
 ├── load/          # Data loading to Firebase (firestore.js)
-├── cicd/          # Build and deployment scripts
-├── k8s/           # Kubernetes management scripts
-└── minikube/      # Local K8s cluster management
+└── cicd/          # Build and deployment scripts
 ```
 
 All data extraction creates:
 
 - JSON files in `data/` directory
-- Log files in root directory (e.g., `sports.log`, `api_event_odds.log`)
+- Log files in root directory (e.g., `api_events.log`, `api_event_odds.log`)
 - Data stored in Firebase collections
-
-## Kubernetes Operations
-
-### Cluster Management
-
-- Create cluster: `npm run k8s-create-cluster` -- creates minikube cluster
-- Delete cluster: `npm run k8s-delete-cluster` -- destroys minikube cluster
-- List resources: `npm run k8s-list` -- shows cluster status and resources
-- View cron jobs: `npm run k8s-cron-jobs` -- displays scheduled tasks
-
-### Application Deployment
-
-REQUIRES: kubectl and minikube installed and available in PATH
 
 ## Testing and Validation
 
@@ -144,7 +129,7 @@ After running data extraction scripts, expect:
 
 - `data/sports.json` -- sports data from The Odds API
 - `data/*.json` -- various extracted data files
-- `*.log` -- Winston log files (sports.log, api_event_odds.log, etc.)
+- `*.log` -- Winston log files (api_events.log, api_event_odds.log, etc.)
 - Firebase collections populated (if properly configured)
 
 ## Common Issues and Troubleshooting
@@ -186,7 +171,6 @@ CRITICAL TIMING INFORMATION - NEVER CANCEL these operations:
 - `/scripts/extract/` -- Main business logic for data extraction
 - `/scripts/bin/` -- Shell script wrappers for extract modules
 - `/spec/` -- Jasmine test specifications
-- `/k8s/` -- Kubernetes manifests for deployment
 - `/config/` -- Firebase and other configuration
 - `/data/` -- Output directory for extracted data (git-ignored)
 

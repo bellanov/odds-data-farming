@@ -44,24 +44,17 @@ npm run <TASK>
 npm run odds-events
 ```
 
-| Task                   | Description                                                                 |
-| ---------------------- | --------------------------------------------------------------------------- |
-| **clean**              | Execute _cleanup_ tasks before relevant builds.                             |
-| **docker**             | Tears down existing _Docker_ containers and redeploys them.                 |
-| **docker-build**       | Executes a _Docker_ build, packaging the project into a **container**.      |
-| **docker-deploy**      | Deploys the most recently built _Docker_ container.                         |
-| **docker-teardown**    | Tears down existing _Docker_ containers.                                    |
-| **format**             | Execute _Prettier_ on the codebase.                                         |
-| **k8s-apply**          | Applys existing _k8s/_ manifests, **procuring** resources.                  |
-| **k8s-config**         | Procures _ConfigMaps_ required by K8s resources.                            |
-| **k8s-create-cluster** | Creates a _Kubernetes_ cluster to deploy **containerized** workloads.       |
-| **k8s-cron-jobs**      | Views _Scheduled Task_ information.                                         |
-| **k8s-delete-cluster** | Deletes a _Kubernetes_ cluster.                                             |
-| **k8s-delete**         | Deletes existing _k8s/_ manifests, **deleteing** resources.                 |
-| **k8s-list**           | Lists existing _k8s_ cluster **information** (namespaces, resources, etc.). |
-| **lint**               | Lint the codebase with _ESLint_ and _Prettier_.                             |
-| **odds-account**       | View _API Usage_ statistics.                                                |
-| **odds-events**        | Query _events_ data.                                                        |
-| **odds-sports**        | Query _sports_ data.                                                        |
-| **odds-event-odds**    | Query _event odds_ data.                                                    |
-| **test**               | Execute unit tests powered by _Jasmine_.                                    |
+| Task                | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| **clean**           | Execute _cleanup_ tasks before relevant builds.                        |
+| **docker**          | Tears down existing _Docker_ containers and redeploys them.            |
+| **docker-build**    | Executes a _Docker_ build, packaging the project into a **container**. |
+| **docker-deploy**   | Deploys the most recently built _Docker_ container.                    |
+| **docker-teardown** | Tears down existing _Docker_ containers.                               |
+| **format**          | Execute _Prettier_ on the codebase.                                    |
+| **lint**            | Lint the codebase with _ESLint_ and _Prettier_.                        |
+| **odds-account**    | View _API Usage_ statistics.                                           |
+| **odds-events**     | Query _events_ data.                                                   |
+| **odds-sports**     | Query _sports_ data.                                                   |
+| **odds-event-odds** | Query _event odds_ data.                                               |
+| **test**            | Execute unit tests powered by _Jasmine_.                               |

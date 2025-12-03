@@ -1,6 +1,6 @@
 {
   "name": "odds-data-farming",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Scripts responsible for farming odds data.",
   "main": "index.js",
   "type": "module",
