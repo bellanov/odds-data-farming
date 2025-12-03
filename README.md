@@ -44,17 +44,17 @@ npm run <TASK>
 npm run odds-events
 ```
 
-| Task                   | Description                                                                 |
-| ---------------------- | --------------------------------------------------------------------------- |
-| **clean**              | Execute _cleanup_ tasks before relevant builds.                             |
-| **docker**             | Tears down existing _Docker_ containers and redeploys them.                 |
-| **docker-build**       | Executes a _Docker_ build, packaging the project into a **container**.      |
-| **docker-deploy**      | Deploys the most recently built _Docker_ container.                         |
-| **docker-teardown**    | Tears down existing _Docker_ containers.                                    |
-| **format**             | Execute _Prettier_ on the codebase.                                         |
-| **lint**               | Lint the codebase with _ESLint_ and _Prettier_.                             |
-| **odds-account**       | View _API Usage_ statistics.                                                |
-| **odds-events**        | Query _events_ data.                                                        |
-| **odds-sports**        | Query _sports_ data.                                                        |
-| **odds-event-odds**    | Query _event odds_ data.                                                    |
-| **test**               | Execute unit tests powered by _Jasmine_.                                    |
+| Task                | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| **clean**           | Execute _cleanup_ tasks before relevant builds.                        |
+| **docker**          | Tears down existing _Docker_ containers and redeploys them.            |
+| **docker-build**    | Executes a _Docker_ build, packaging the project into a **container**. |
+| **docker-deploy**   | Deploys the most recently built _Docker_ container.                    |
+| **docker-teardown** | Tears down existing _Docker_ containers.                               |
+| **format**          | Execute _Prettier_ on the codebase.                                    |
+| **lint**            | Lint the codebase with _ESLint_ and _Prettier_.                        |
+| **odds-account**    | View _API Usage_ statistics.                                           |
+| **odds-events**     | Query _events_ data.                                                   |
+| **odds-sports**     | Query _sports_ data.                                                   |
+| **odds-event-odds** | Query _event odds_ data.                                               |
+| **test**            | Execute unit tests powered by _Jasmine_.                               |
