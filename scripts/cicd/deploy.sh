@@ -4,8 +4,8 @@
 
 # Deploy Container
 docker run \
-  --name odds-data-farming \
+  --name fantasy-ace-odds \
   --env-file ./.env \
   --cpus="1.5" \
   --memory="512m" \
-  odds-data-farming:latest
+  fantasy-ace-odds:latest
