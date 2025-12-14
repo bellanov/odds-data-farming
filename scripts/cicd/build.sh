@@ -2,4 +2,4 @@
 #
 # Build Docker containers after code changes.
 
-docker build -t odds-data-farming:latest .
+docker build -t fantasy-ace-odds:latest .
