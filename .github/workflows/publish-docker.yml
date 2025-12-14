@@ -26,8 +26,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t bellanov/odds-data-farming:${{ steps.version.outputs.VERSION }} .
+          docker build -t bellanov/fantasy-ace-odds:${{ steps.version.outputs.VERSION }} .
 
       - name: Push Docker image
         run: |
-          docker push bellanov/odds-data-farming:${{ steps.version.outputs.VERSION }}
+          docker push bellanov/fantasy-ace-odds:${{ steps.version.outputs.VERSION }}

@@ -1,6 +1,6 @@
 {
-  "name": "odds-data-farming",
-  "version": "0.7.1",
+  "name": "fantasy-ace-odds",
+  "version": "0.1.0",
   "description": "Scripts responsible for farming odds data.",
   "main": "index.js",
   "type": "module",
